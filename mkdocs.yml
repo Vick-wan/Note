@@ -5,6 +5,7 @@ nav:
   - 首页: index.md
   - Graph:
     - DSU: Note/Graph/DSU/DSU.md
+    - Topsort: Note/Graph/Topsort/Topsort.md
   - 指南: guides/install.md
   - 关于: about.md
 
