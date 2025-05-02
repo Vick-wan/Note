@@ -1,0 +1,12 @@
+site_name: Vick's Wiki
+theme:
+  name: material    
+nav:
+  - 首页: index.md
+  - Graph:
+    - DSU: Note/Graph/DSU/DSU.md
+  - 指南: guides/install.md
+  - 关于: about.md
+
+plugins:           
+  - search        
