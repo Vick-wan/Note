@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -166,14 +165,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8f7a40e601d3d19",
+  "active": "dd3f3492e4c56104",
   "lastOpenFiles": [
+    "Vickfkdfjk",
     "folder.md",
     "Untitled.md",
     "Graph/DSU/DSU.md",
     "Graph/Topsort/Topsort.md",
     "如何使用 mkdocs 并且同步到 github.md",
-    "Untitled",
     "Graph/Topsort"
   ]
 }
