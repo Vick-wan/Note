@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "如何使用 mkdocs 并且同步到 github.md",
-                "mode": "preview",
+                "file": "Untitled.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "如何使用 mkdocs 并且同步到 github"
+              "title": "Untitled"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:Basic  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,12 +166,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fb0c9a51cf1ab79e",
+  "active": "c8f7a40e601d3d19",
   "lastOpenFiles": [
+    "folder.md",
+    "Untitled.md",
+    "Graph/DSU/DSU.md",
     "Graph/Topsort/Topsort.md",
     "如何使用 mkdocs 并且同步到 github.md",
     "Untitled",
-    "Graph/DSU/DSU.md",
     "Graph/Topsort"
   ]
 }
