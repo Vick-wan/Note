@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "7d7c0409cf88f476",
+    "id": "124362dce967d327",
     "type": "split",
     "children": [
       {
-        "id": "9c5dc1055ec10fce",
+        "id": "02ad320d8c0fb4d0",
         "type": "tabs",
         "children": [
           {
-            "id": "e3e206080e0e9a91",
+            "id": "c2d3dc7cac17eb74",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph/DSU/DSU.md",
+                "file": "Note/Graph/DSU/DSU.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "0ad8bb30acd3d453",
+    "id": "041dbd40da765477",
     "type": "split",
     "children": [
       {
-        "id": "e446dd5622566c4e",
+        "id": "ea03d4cba921fdae",
         "type": "tabs",
         "children": [
           {
-            "id": "453d6dd5dc6516ea",
+            "id": "6c3448ea69cc6e32",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "add9d7af3fba2afc",
+            "id": "30d8700c48ec6d58",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,17 +61,17 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
-            "id": "cac7e1e356105f08",
+            "id": "a6f3aefca87d07be",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "书签"
             }
           }
         ]
@@ -81,19 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "9c7932f15c5d8c67",
+    "id": "1049e43d85ffb989",
     "type": "split",
     "children": [
       {
-        "id": "2ef986d50ef6c6b3",
+        "id": "dab51f7fcf576fae",
         "type": "tabs",
         "children": [
           {
-            "id": "5a491c6a2295836d",
+            "id": "cb96c8a8cccd35dd",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Note/Graph/DSU/DSU.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,24 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "DSU 的反向链接列表"
             }
           },
           {
-            "id": "c7a4efa7369fab24",
+            "id": "e72ffb7f988b50de",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Note/Graph/DSU/DSU.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "DSU 的出链列表"
             }
           },
           {
-            "id": "8ddee3088bda5caf",
+            "id": "30dbe6934bb8ae06",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -131,21 +133,22 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "标签"
             }
           },
           {
-            "id": "f84c722329da7272",
+            "id": "e77469989bca1ce4",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Note/Graph/DSU/DSU.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "DSU 的大纲"
             }
           }
         ]
@@ -165,19 +168,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e3e206080e0e9a91",
+  "active": "c2d3dc7cac17eb74",
   "lastOpenFiles": [
-    "Graph/DSU/DSUimage1.png",
-    "Graph/DSU/DSU.md",
-    "Note/Graph/DSU/DSUimage1.png.md",
-    "Note/Graph/DSU",
-    "Note/Graph",
-    "Note",
-    "Untitled.md",
-    "Vickfkdfjk",
-    "folder.md",
-    "Graph/Topsort/Topsort.md",
-    "如何使用 mkdocs 并且同步到 github.md",
-    "Graph/Topsort"
+    "index.md",
+    "Note/Graph/DSU/DSU.md",
+    "Note/Graph/DSU/DSUimage1.md",
+    "Note/Graph/DSU/DSUimage1.png"
   ]
 }

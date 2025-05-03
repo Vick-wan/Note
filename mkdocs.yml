@@ -11,3 +11,10 @@ nav:
 
 plugins:           
   - search        
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true  # 启用通用数学模式
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # MathJax 3
