@@ -4,9 +4,9 @@
 
 并查集主要有两个操作实现的，顾名思义就是 **并** 和 **查**了：
 
-> 合并 $Union$ ： 合并两个元素的树，也就是把两个元素所属集合合并。
+> 合并 $\rm Union$ ： 合并两个元素的树，也就是把两个元素所属集合合并。
 > 
-> 查询 $Find$ ：查询一个元素所属的树（也就是所属的组）。
+> 查询 $\rm Find$ ：查询一个元素所属的树（也就是所属的组）。
 
 ## 初始化
 
@@ -32,10 +32,10 @@ int findroot(int x) {
 
 这样会发现一个问题，如果我们的树长这个样子：
 
-![](/Note/Graph/DSU/DSUimage1.png)
+![image lost](/assets/images/DSU1.png)
 
 也就是说如果树是一条链，发现每次查询最下面的点会递归很多次才可以到根节点。既然树内的结构不影响根节点我们就可以把这个做成菊花图，如下：
-![](/Note/Graph/DSU/DSUimage2.png)
+![image lost](/assets/images/DSU2.png)
 
 ```cpp
 void findroot(int x) {
@@ -81,8 +81,8 @@ int merge(int x, int y) {
 ### 判环
 
 在无向图中，并查集可以用来判断是否存在环（仅判断是否存在，并不能找到这一整个环）。如果在加这一条边之前，两个树已经用另外一条路径连接了（根节点相同），说明就有环。可以参考下图来辅助理解：
-（红色边是的 $u$ 已经有另一条路径可以到达 $v$）
-![](/Note/Graph/DSU/DSUimage3.png)
+（红色边使得 $u$ 已经有另一条路径可以到达 $v$）
+![image lost](/assets/images/DSU3.png)
 
 ```cpp
 bool merge(int x, int y) { // 返回true就是没有环，返回false就是有环

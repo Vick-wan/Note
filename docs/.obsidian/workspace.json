@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "02ad320d8c0fb4d0",
+        "id": "6ba2b8f291d5fcbe",
         "type": "tabs",
         "children": [
           {
-            "id": "c2d3dc7cac17eb74",
+            "id": "657a489416949696",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Note/Graph/DSU/DSU.md",
+                "file": "Note/如何使用 mkdocs 并且同步到 github.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DSU"
+              "title": "如何使用 mkdocs 并且同步到 github"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Note/Graph/DSU/DSU.md",
+                "file": "Note/如何使用 mkdocs 并且同步到 github.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "DSU 的反向链接列表"
+              "title": "如何使用 mkdocs 并且同步到 github 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Note/Graph/DSU/DSU.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "DSU 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -142,21 +141,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Note/Graph/DSU/DSU.md",
+                "file": "Note/如何使用 mkdocs 并且同步到 github.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "DSU 的大纲"
+              "title": "如何使用 mkdocs 并且同步到 github 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,11 +167,27 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c2d3dc7cac17eb74",
+  "active": "657a489416949696",
   "lastOpenFiles": [
-    "index.md",
+    "Note/Graph/Topological sorting/Topological sorting.md",
     "Note/Graph/DSU/DSU.md",
-    "Note/Graph/DSU/DSUimage1.md",
-    "Note/Graph/DSU/DSUimage1.png"
+    "B3644.md",
+    "Note/Graph/Types of Graph/DAG/DAG.md",
+    "assets/images/DAG1.png",
+    "assets/images/DSU3.png",
+    "assets/images/DSU2.png",
+    "assets/images/DSU1.png",
+    "assets/images/DSU1.md",
+    "assets/images",
+    "assets/未命名.md",
+    "assets",
+    "Note/Graph/Types of Graph/DAG",
+    "Note/Graph/Types of Graph/未命名.md",
+    "Note/Graph/Types of Graph",
+    "未命名.canvas",
+    "2025-05-03.md",
+    "Note/Untitled.md",
+    "index.md",
+    "Note/Graph/DSU/DSUimage1.md"
   ]
 }

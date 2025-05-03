@@ -3,14 +3,22 @@ theme:
   name: material    
 nav:
   - 首页: index.md
+  - Basic:
+    - Binary Lifting: about.md
+    - Binary Search: about.md
+  - Data Structure:
+    - Queue: about.md
+    - Stack: about.md
+  - DP: about.md
+  - Math: about.md
   - Graph:
     - DSU: Note/Graph/DSU/DSU.md
-    - Topsort: Note/Graph/Topsort/Topsort.md
+    - Topological sorting: Note/Graph/Topological sorting/Topological sorting.md
   - 指南: guides/install.md
   - 关于: about.md
 
 plugins:           
-  - search        
+  - search
 
 markdown_extensions:
   - pymdownx.arithmatex:
