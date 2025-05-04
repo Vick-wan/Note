@@ -51,9 +51,12 @@ vector<int> topsort() {
 }
 ```
 ## 拓扑排序判环
+## 拓扑排序+DP
+## 有要求的拓扑排序
 ## 例题
 以下是拓扑排序的经典简单的题目：
 
 - [B3644 【模板】拓扑排序/家谱树](https://www.luogu.com.cn/problem/B3644)
 - [P4017 最大食物链计数](https://www.luogu.com.cn/problem/P4017)
 - [P1347 排序](https://www.luogu.com.cn/problem/P1347)
+- 

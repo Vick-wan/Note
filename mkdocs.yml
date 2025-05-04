@@ -1,6 +1,19 @@
 site_name: Vick's Wiki
 theme:
   name: material    
+
+  font:
+    text: Geogia
+  icon:
+    logo: material/laptop
+  features:
+    - header.autohide
+    - navigation.top
+    - navigation.tabs
+  palette:
+    scheme: default
+    primary: teal
+    accent: indigo
 nav:
   - 首页: index.md
   - Basic:
