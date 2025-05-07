@@ -3,4 +3,4 @@
 这个笔记是我在编程的过程中遇到的难点和考点的总结。
 
 通缉令
-GEORGE OSCAR
+小GEORGE OSCAR
