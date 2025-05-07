@@ -5,7 +5,7 @@ theme:
   font:
     text: Geogia
   icon:
-    logo: material/laptop
+    logo: material/notebook
   features:
     - header.autohide
     - navigation.top
@@ -25,8 +25,10 @@ nav:
   - DP: about.md
   - Math: about.md
   - Graph:
-    - DSU: Note/Graph/DSU/DSU.md
-    - Topological sorting: Note/Graph/Topological sorting/Topological sorting.md
+    - Types of Graph: 
+      - DAG: Note/Graph/Types of Graph/DAG.md
+    - DSU: Note/Graph/DSU.md
+    - Topological sorting: Note/Graph/Topological sorting.md
   - 指南: guides/install.md
   - 关于: about.md
 

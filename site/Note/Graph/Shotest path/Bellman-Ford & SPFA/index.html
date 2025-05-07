@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../../../..">
-      
-      
-        <link rel="next" href="../../Topological%20sorting/Topological%20sorting/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>DSU - Vick's Wiki</title>
+        <title>Bellman Ford & SPFA - Vick's Wiki</title>
       
     
     
@@ -70,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#dense-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +83,7 @@
     <a href="../../../.." title="Vick&#39;s Wiki" class="md-header__button md-logo" aria-label="Vick's Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm4 4H5v2h2zm0-4V5H5v2zm0 12v-2H5v2z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DSU
+              Bellman Ford & SPFA
             
           </span>
         </div>
@@ -272,13 +268,18 @@
   
   
   
+  
     
+    
+      
+  
+  
   
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Types%20of%20Graph/DAG/" class="md-tabs__link">
           
   
   
@@ -286,6 +287,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -353,7 +357,7 @@
     <a href="../../../.." title="Vick&#39;s Wiki" class="md-nav__button md-logo" aria-label="Vick's Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm4 4H5v2h2zm0-4V5H5v2zm0 12v-2H5v2z"/></svg>
 
     </a>
     Vick's Wiki
@@ -619,29 +623,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -654,7 +653,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Graph
@@ -665,126 +664,68 @@
                 
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+    
+    
+    
       
       
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
           
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
-    DSU
+    Types of Graph
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Types of Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Types%20of%20Graph/DAG/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    DSU
+    DAG
     
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      初始化
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      查询
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      合并
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="合并">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      常规合并
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      启发式合并
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      判环
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -798,7 +739,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Topological%20sorting/Topological%20sorting/" class="md-nav__link">
+      <a href="../../DSU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DSU
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topological%20sorting/" class="md-nav__link">
         
   
   
@@ -890,71 +854,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#dense-graph" class="md-nav__link">
     <span class="md-ellipsis">
-      定义
+      . ​稠密图（Dense Graph）​​
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      初始化
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      查询
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      合并
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="合并">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      常规合并
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      启发式合并
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      判环
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -974,73 +878,18 @@
 
 
 
-  <h1>DSU</h1>
+  <h1>Bellman Ford & SPFA</h1>
 
-<h2 id="_1">定义</h2>
-<p>并查集 (DSU) 是一种负责管理元素所在的区域的一种数据结构。并查集使用一个森林来实现，每个一树里的元素是属于同一个集合的，也就是说是同一个组。</p>
-<p>并查集主要有两个操作实现的，顾名思义就是 <strong>并</strong> 和 <strong>查</strong>了：</p>
-<blockquote>
-<p>合并 <span class="arithmatex">\(\rm Union\)</span> ： 合并两个元素的树，也就是把两个元素所属集合合并。</p>
-<p>查询 <span class="arithmatex">\(\rm Find\)</span> ：查询一个元素所属的树（也就是所属的组）。</p>
-</blockquote>
-<h2 id="_2">初始化</h2>
-<p>每一个元素都有一个所属的组（树），一开始每一个元素的组（树）<strong>仅</strong>包含自己，也就是自己就是根节点。一开始每一个点的根节点自然就是自己了（因为就一个点）。</p>
-<pre><code class="language-cpp">int root[MAXN];
-void init() {
-    for (int i = 1; i &lt;= n; i++) root[i] = i; // 代表元素/根节点就是自己
-}
-</code></pre>
-<h2 id="_3">查询</h2>
-<p>给定一个元素，查询这个元素的代表元素，也就是查询这个树的根节点。我们递归找到自己的父亲的父亲，直到找到根节点，也就是自己的父亲就是自己（听着有点怪）。</p>
-<pre><code class="language-cpp">int findroot(int x) {
-    if (root[x] == x) return x;
-    return findroot(root[x]);
-}
-</code></pre>
-<p>这样会发现一个问题，如果我们的树长这个样子：</p>
-<p><img alt="image lost" src="../../../../assets/images/DSU1.png" /></p>
-<p>也就是说如果树是一条链，发现每次查询最下面的点会递归很多次才可以到根节点。既然树内的结构不影响根节点我们就可以把这个做成菊花图，如下：
-<img alt="image lost" src="../../../../assets/images/DSU2.png" /></p>
-<pre><code class="language-cpp">void findroot(int x) {
-    if (root[x] == x) return x;
-    return root[x] = findroot(root[x]);
-}
-</code></pre>
-<h2 id="_4">合并</h2>
-<h3 id="_5">常规合并</h3>
-<p>让两个元素所在的树合并，就是找到两个树的根节点，让根节点进行合并就可以了。</p>
-<pre><code class="language-cpp">void merge(int x) {
-    int rx = findroot(x), ry = findroot(y);
-    root[rx] = ry;
-}
-</code></pre>
-<p>这样我们就实现了两个树的合并</p>
-<h3 id="_6">启发式合并</h3>
-<p>在合并的过程中我们可以让树的大小较小的树合并到较大的树上，这样可以让查询的时间更短，次数更少。</p>
-<pre><code class="language-cpp">int root[MAXN], siz[MAXN]; // 多加了一个树的大小
-// findroot函数在这里就省略了，可以参考对应的章节
-int merge(int x, int y) {
-    int rx = findroot(x), ry = findroot(y);
-    if (siz[rx] &lt; siz[ry]) {
-        root[rx] = ry;
-        siz[ry] += rx;
-    } else {
-        root[ry] = rx;
-        siz[rx] += ry;
-    }
-}
-</code></pre>
-<h3 id="_7">判环</h3>
-<p>在无向图中，并查集可以用来判断是否存在环（仅判断是否存在，并不能找到这一整个环）。如果在加这一条边之前，两个树已经用另外一条路径连接了（根节点相同），说明就有环。可以参考下图来辅助理解：
-（红色边使得 <span class="arithmatex">\(u\)</span> 已经有另一条路径可以到达 <span class="arithmatex">\(v\)</span>）
-<img alt="image lost" src="../../../../assets/images/DSU3.png" /></p>
-<pre><code class="language-cpp">bool merge(int x, int y) { // 返回true就是没有环，返回false就是有环
-    int rx = findroot(x), ry = findroot(y);
-    if (rx == ry) return false; // 合并失败，因为x已经有另一条路到y，所以加上这条边出现了环
-
-    root[rx] = ry; // 这里就是普通合并了，就不按照启发式合并写了
-}
-</code></pre>
+<p>SPFA 在稠密图（dense Graph) 中时间复杂度最坏】</p>
+<h3 id="dense-graph">. ​<strong>稠密图（Dense Graph）​</strong>​</h3>
+<ul>
+<li>​<strong>条件</strong>​：当图的边数 ​<strong>E</strong>​ 接近顶点数平方（即 ​<strong>E ≈ V²</strong>），例如完全图或网格图。</li>
+<li>​<strong>原因</strong>​：<ul>
+<li>在稠密图中，每个节点的邻接边数量较多。SPFA每次处理一个节点时，需要遍历其所有邻接边进行松弛操作。</li>
+<li>若每次松弛操作均触发新的节点入队，且每个节点被多次处理（如接近 ​<strong>V-1</strong>​ 次），则总时间复杂度退化为 ​<strong>O(V*E)​</strong>​（因每轮处理需遍历所有边）</li>
+</ul>
+</li>
+</ul>
 
 
 

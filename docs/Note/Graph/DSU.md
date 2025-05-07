@@ -92,3 +92,6 @@ bool merge(int x, int y) { // 返回true就是没有环，返回false就是有�
     root[rx] = ry; // 这里就是普通合并了，就不按照启发式合并写了
 }
 ```
+
+## 例题
+- []()
