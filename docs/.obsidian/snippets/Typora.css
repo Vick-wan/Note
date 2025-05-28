@@ -1,0 +1,325 @@
+/* 浅色模式 */
+.theme-light {
+
+  --h1-color: #e01616;
+  --h2-color: #d8701b;
+  --h3-color: #0f7e0c;
+  --h4-color: #7f1cc2;
+  --h5-color: #165cc5;
+  --h6-color: #7a0e29;
+/*
+  --h1-color: #0f7e0c;
+  --h2-color: #3c49dc;
+  --h3-color: #0f7e0c;
+  --h4-color: #3c49dc;
+  --h5-color: #0f7e0c;
+  --h6-color: #3c49dc;
+*/
+
+	/* list 相关样式 */
+	--list-spacing: 0.3rem;
+	--list-marker-color:#696969;
+	/* 表格颜色交替 */
+	--table-row-alt-background: #f8f8f8;
+	/* 代码块颜色 */
+	--code-normal: var(--text-nornal);
+	--code-background: #f8f8f8;
+	/* 链接颜色 */
+	--link-external-color: #4183c4;
+	/* 导航栏字体 */
+	--nav-item-color: black;
+	--nav-item-weight: 500;
+	--nav-item-size: 97%;
+	/* 导航栏图标颜色 */
+	--nav-collapse-icon-color: #777;
+	--nav-collapse-icon-color-collapsed: #222;
+	/* 引用 */
+	--blockquote-border-thickness: 4px;
+	--blockquote-border-color: rgb(223, 226, 229);
+	/* 选中文字的背景色 */
+	--text-selection: #7CA4EB;
+	/* 降低亮度至 85% */
+	filter: brightness(80%);
+/* inline 代码块 */
+span.cm-inline-code {
+	background-color: #f3f4f4 !important;
+	border: 1px solid #e7eaed;
+}
+}
+
+/* 深色模式下的调整 */
+.theme-dark {
+  --h1-color: #e01616;
+  --h2-color: #d8701b;
+  --h3-color: #0f7e0c;
+  --h4-color: #7f1cc2;
+  --h5-color: #165cc5;
+  --h6-color: #7a0e29;
+
+	/* list 相关样式 */
+	--list-spacing: 0.3rem;
+	--list-marker-color:#E0FFFF;
+	/* 表格颜色交替 */
+	--table-row-alt-background: #363636;
+	/* 代码块颜色 */
+	--code-normal: var(--text-nornal);
+	--code-background:#363636;
+	/* 链接颜色 */
+	--link-external-color: #6ccda4;
+	/* 导航栏字体 */
+	--nav-item-color: white
+	--nav-item-weight: 500;
+	--nav-item-size: 97%;
+	/* 导航栏图标颜色 */
+	--nav-collapse-icon-color: #777;
+	--nav-collapse-icon-color-collapsed: #222;
+	/* 引用 */
+	--blockquote-border-thickness: 4px;
+	/*--blockquote-border-color: rgb(223, 226, 229);/
+	/* 选中文字的背景色 */
+	--text-selection: #7CA4EB;
+	/* 降低亮度至 85% */
+	filter: brightness(100%);
+/* inline 代码块 */
+span.cm-inline-code {
+	background-color: #363636 !important;
+	border: 1px solid #363636;
+}
+
+}
+
+/* quiet-outline */
+.quiet-outline .n-tree-node-content {
+	font-weight: 500;
+}
+
+/* 标题 */
+.HyperMD-header {
+	padding-bottom: 0.4rem !important;
+	#border-bottom: 1px solid #FA8072;
+}
+
+/* 引用 */
+.HyperMD-quote {
+	color: #777;
+}
+
+/* 隐藏链接图片 */
+.external-link {
+	padding-right: 0;
+	background-size: 0;
+}
+
+/* 代码块缩进 */
+.HyperMD-codeblock {
+	tab-size: 4;
+}
+
+/* list 行首添加空白 */
+.HyperMD-list-line > .cm-formatting-list + span:before {
+	content: '  ';
+}
+
+/* list 相关样式 */
+/* https://forum.obsidian.md/t/style-bullets-in-lists-by-level/46152 */
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-1, .HyperMD-list-line-5) .list-bullet:after {
+	/* Bullet */
+	height: 5.5px;
+	width: 5.5px;
+	border-radius: 50%;
+	background-color: var(--list-marker-color);
+}
+
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-2, .HyperMD-list-line-6) .list-bullet:after {
+	/* Hollow Bullet */
+	height: 4px;
+	width: 4px;
+	background-color: Transparent;
+	border-color: var(--list-marker-color);
+	border-style: solid;
+	border-radius: 50%;
+	border-width: 1.5px;
+}
+
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-3, .HyperMD-list-line-7) .list-bullet:after {
+	/* Solid Square */
+	height: 5.5px;
+	width: 5.5px;
+	border-radius: 0%;
+	background-color: var(--list-marker-color);
+}
+
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-4, .HyperMD-list-line-8) .list-bullet:after {
+	/* Hollow Square */
+	height: 4px;
+	width: 4px;
+	background-color: Transparent;
+	border-color: var(--list-marker-color);
+	border-style: solid;
+	border-radius: 0%;
+	border-width: 1.5px;
+}
+
+/* https://forum.obsidian.md/t/adding-caption-to-images/16431/24 */
+/* 图片居中 */
+img {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+}
+    
+ .markdown-source-view.mod-cm6 .cm-content > * {
+        margin: auto auto !important;
+}
+
+/* 图片下面显示 alt text */
+.image-embed[alt]:after {
+    content: attr(alt);
+    display: block;
+    margin: 0.2rem 1rem 1rem 1rem;
+    font-size: 90%;
+    line-height: 1.4;
+    color: var(--text-faint);
+    text-align: center;
+}
+
+
+/* 编辑模式：修改不同级别标题的字体大小和颜色 */
+.HyperMD-header-1, .inline-title[data-level='1'], .HyperMD-list-line .cm-header-1 {
+    font-variant: var(--h1-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h1-line-height);
+    font-size: var(--h1-size);
+    color: var(--h1-color);
+    text-align: center;
+    font-weight: var(--h1-weight);
+    font-style: var(--h1-style);
+    font-family: var(--h1-font);
+}
+.HyperMD-header-2, .inline-title[data-level='2'], .HyperMD-list-line .cm-header-2 {
+    font-variant: var(--h2-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h2-line-height);
+    font-size: var(--h2-size);
+    color: var(--h2-color);
+    text-align: center;
+    font-weight: var(--h2-weight);
+    font-style: var(--h2-style);
+    font-family: var(--h2-font);
+}
+.HyperMD-header-3, .inline-title[data-level='3'], .HyperMD-list-line .cm-header-3 {
+    font-variant: var(--h3-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h3-line-height);
+    font-size: var(--h3-size);
+    color: var(--h3-color);
+    font-weight: var(--h3-weight);
+    font-style: var(--h3-style);
+    font-family: var(--h3-font);
+}
+.HyperMD-header-4, .inline-title[data-level='4'], .HyperMD-list-line .cm-header-4 {
+    font-variant: var(--h4-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h4-line-height);
+    font-size: var(--h4-size);
+    color: var(--h4-color);
+    font-weight: var(--h4-weight);
+    font-style: var(--h4-style);
+    font-family: var(--h4-font);
+}
+.HyperMD-header-5, .inline-title[data-level='5'], .HyperMD-list-line .cm-header-5 {
+    font-variant: var(--h5-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h5-line-height);
+    font-size: var(--h5-size);
+    color: var(--h5-color);
+    font-weight: var(--h5-weight);
+    font-style: var(--h5-style);
+    font-family: var(--h5-font);
+}
+.HyperMD-header-6, .inline-title[data-level='6'], .HyperMD-list-line .cm-header-6 {
+    font-variant: var(--h6-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h6-line-height);
+    font-size: var(--h6-size);
+    color: var(--h6-color);
+    font-weight: var(--h6-weight);
+    font-style: var(--h6-style);
+    font-family: var(--h6-font);
+}
+
+/* 阅读模式：修改不同级别标题的字体大小和颜色 */
+h1, .markdown-rendered h1 {
+    font-variant: var(--h1-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h1-line-height);
+    font-size: var(--h1-size);
+    color: var(--h1-color);
+    text-align: center;
+    font-weight: var(--h1-weight);
+    font-style: var(--h1-style);
+    font-family: var(--h1-font);
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
+}
+h2, .markdown-rendered h2 {
+    font-variant: var(--h2-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h2-line-height);
+    font-size: var(--h2-size);
+    color: var(--h2-color);
+    text-align: center;
+    font-weight: var(--h2-weight);
+    font-style: var(--h2-style);
+    font-family: var(--h2-font);
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
+}
+h3, .markdown-rendered h3 {
+    font-variant: var(--h3-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h3-line-height);
+    font-size: var(--h3-size);
+    color: var(--h3-color);
+    font-weight: var(--h3-weight);
+    font-style: var(--h3-style);
+    font-family: var(--h3-font);
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
+}
+h4, .markdown-rendered h4 {
+    font-variant: var(--h4-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h4-line-height);
+    font-size: var(--h4-size);
+    color: var(--h4-color);
+    font-weight: var(--h4-weight);
+    font-style: var(--h4-style);
+    font-family: var(--h4-font);
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
+}
+h5, .markdown-rendered h5 {
+    font-variant: var(--h5-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h5-line-height);
+    font-size: var(--h5-size);
+    color: var(--h5-color);
+    font-weight: var(--h5-weight);
+    font-style: var(--h5-style);
+    font-family: var(--h5-font);
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
+}
+h6, .markdown-rendered h6 {
+    font-variant: var(--h6-variant);
+    letter-spacing: -0.015em;
+    line-height: var(--h6-line-height);
+    font-size: var(--h6-size);
+    color: var(--h6-color);
+    font-weight: var(--h6-weight);
+    font-style: var(--h6-style);
+    font-family: var(--h6-font);
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
+}

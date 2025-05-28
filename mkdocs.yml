@@ -5,20 +5,32 @@ theme:
   font:
     text: Geogia
   icon:
-    logo: material/notebook
+    logo: material/pen
   features:
     - header.autohide
     - navigation.top
     - navigation.tabs
   palette:
-    scheme: default
-    primary: teal
-    accent: indigo
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 nav:
   - 首页: index.md
   - Basic:
-    - Binary Lifting: about.md
-    - Binary Search: about.md
+    - Priority of operations: Note/Basic/Priority of operations.md
   - Data Structure:
     - Queue: about.md
     - Stack: about.md
@@ -29,6 +41,8 @@ nav:
       - DAG: Note/Graph/Types of Graph/DAG.md
     - DSU: Note/Graph/DSU.md
     - Topological sorting: Note/Graph/Topological sorting.md
+    - Meet in the middle: Note/Graph/Meet in the middle.md
+    - Trie: Note/Graph/Trie.md
   - 指南: guides/install.md
   - 关于: about.md
 
