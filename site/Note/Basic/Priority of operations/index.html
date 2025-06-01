@@ -1080,61 +1080,115 @@
 <th>优先级</th>
 <th>运算符</th>
 <th>描述</th>
+<th>运算方向</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1 级</td>
-<td>（）</td>
-<td>括号</td>
+<td>（），a++，a--</td>
+<td>括号，后缀自增/自减</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>2 级</td>
-<td><span class="arithmatex">\(\times\)</span>， <span class="arithmatex">\(\div\)</span>，<span class="arithmatex">\(\%\)</span></td>
-<td>乘，除，取模</td>
+<td>++a，--a，-a，！，~</td>
+<td>前缀自增/自减，负号，逻辑非，位去反</td>
+<td><span class="arithmatex">\(\gets\)</span></td>
 </tr>
 <tr>
 <td>3 级</td>
-<td><span class="arithmatex">\(+\)</span> ，<span class="arithmatex">\(-\)</span></td>
-<td>加，减</td>
+<td><span class="arithmatex">\(\times\)</span>， <span class="arithmatex">\(\div\)</span>，<span class="arithmatex">\(\%\)</span></td>
+<td>乘，除，取模</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>4 级</td>
-<td>&lt;&lt;，&gt;&gt;</td>
-<td>左移，右移</td>
+<td><span class="arithmatex">\(+\)</span> ，<span class="arithmatex">\(-\)</span></td>
+<td>加，减</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>5 级</td>
-<td>&amp;</td>
-<td>按位与</td>
+<td>&lt;&lt;，&gt;&gt;</td>
+<td>左移，右移</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>6 级</td>
-<td>^</td>
-<td>按位异或</td>
+<td>\==，!=</td>
+<td>相等比较</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>7 级</td>
-<td>|</td>
-<td>按位或</td>
+<td>&amp;</td>
+<td>按位与</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>8 级</td>
-<td>&amp;&amp;</td>
-<td>逻辑与</td>
+<td>^</td>
+<td>按位异或</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>9 级</td>
-<td>||</td>
-<td>逻辑或</td>
+<td>|</td>
+<td>按位或</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td>10 级</td>
+<td>&amp;&amp;</td>
+<td>逻辑与</td>
+<td><span class="arithmatex">\(\to\)</span></td>
+</tr>
+<tr>
+<td>11 级</td>
+<td>||</td>
+<td>逻辑或</td>
+<td><span class="arithmatex">\(\to\)</span></td>
+</tr>
+<tr>
+<td>12 级</td>
 <td>？：</td>
 <td>三元运算符</td>
+<td><span class="arithmatex">\(\gets\)</span></td>
+</tr>
+<tr>
+<td>13 级</td>
+<td>=</td>
+<td>赋值</td>
+<td><span class="arithmatex">\(\gets\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td>+=，-=，*=，/=</td>
+<td>复合赋值</td>
+<td><span class="arithmatex">\(\gets\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td>%=，&lt;&lt;=，&gt;&gt;=，&amp;=</td>
+<td>复合赋值</td>
+<td><span class="arithmatex">\(\gets\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td>^=，|=</td>
+<td>复合赋值</td>
+<td><span class="arithmatex">\(\gets\)</span></td>
+</tr>
+<tr>
+<td>14 级</td>
+<td>，</td>
+<td>逗号</td>
+<td><span class="arithmatex">\(\to\)</span></td>
 </tr>
 <tr>
 <td><strong>备注：上图表格级别越小，优先级越高</strong></td>
+<td></td>
 <td></td>
 <td></td>
 </tr>

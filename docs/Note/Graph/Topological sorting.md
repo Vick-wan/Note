@@ -15,7 +15,7 @@ $\vdots$
 
 #### 有向图（可能有环）
 如果是一个有向图（可能有环）会发生什么事情呢？我们分析下面的例子：
-![image lost](../../../assets/images/topological_sorting1.png)
+![image lost](../../assets/images/topological_sorting1.png)
 
 我们可以发现下面的例子进行到第 0 步时入度都不为 0，直接结束了，如果拓扑排序结束而且还有点没有被访问，那就说明这个图有环。
 ### 总结

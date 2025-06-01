@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Note/Search/BFS.md",
+                "file": "Note/Tree/LCA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BFS"
+              "title": "LCA"
             }
           }
         ],
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Note/Search/BFS.md",
+                "file": "Note/Tree/LCA.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BFS 的大纲"
+              "title": "LCA 的大纲"
             }
           }
         ],
@@ -184,9 +184,15 @@
   },
   "active": "c78df92065e9bf37",
   "lastOpenFiles": [
+    "Note/Graph/Topological sorting.md",
+    "Note/Graph/Types of Graph/DAG.md",
+    "Note/Basic/Priority of operations.md",
     "Note/Tree/LCA.md",
-    "Note/Search/Meet in the middle.md",
+    "Note/Data_structure/DSU.md",
+    "Note/Data_structure/Trie.md",
     "Note/Graph/Basic Segment Tree.md",
+    "Note/Search/BFS.md",
+    "Note/Search/Meet in the middle.md",
     "珍珠港事件.md",
     "Note/Untitled.md",
     "Note/如何使用 mkdocs 并且同步到 github.md",
@@ -195,14 +201,10 @@
     "Note/Graph/Shotest path/Floyd.md",
     "Note/Graph/Shotest path/Dijkstra.md",
     "Note/Graph/Shotest path/Bellman-Ford & SPFA.md",
-    "Note/Basic/Priority of operations.md",
     "Note/Basic/Binary Search.md",
     "Note/Basic/Binary Lifting.md",
-    "Note/Search/BFS.md",
     "assets/images/LCA1.png",
     "Note/Tree",
-    "Note/Data_structure/DSU.md",
-    "Note/Data_structure/Trie.md",
     "Note/Search",
     "Note/Graph/DFS.md",
     "Note/Basic/Binary search/Binary search.md",
@@ -211,13 +213,11 @@
     "assets/images/BFS2.png",
     "assets/images/BFS1.png",
     "assets/images/topological_sorting1.png",
-    "Note/Graph/Types of Graph/DAG.md",
     "assets/images/DSU3.png",
     "Note/Graph/meet in the middle",
     "assets/images/头像.jpg",
     "未命名",
     "index.md",
-    "Note/Graph/Topological sorting.md",
     "assets/images/berber.png",
     "assets/berber.png",
     "berber.png",

@@ -1059,6 +1059,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1202,6 +1211,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1271,12 +1289,24 @@ for (int i = 1; i &lt;= 30; i++) {
 <p><span class="arithmatex">\(fa[u][0] = f\)</span> 这很容易理解就是初始化 u 的父亲。但是这个 <code>for</code> 循环是什么意思呢？观察发现 <span class="arithmatex">\(fa[u][i - 1]\)</span> 是 u 向上的第 <span class="arithmatex">\(2^{i - 1}\)</span> 辈的节点编号，而 <span class="arithmatex">\(fa[fa[u][i - 1]][i - 1]\)</span> 表示的是 u 向上第 <span class="arithmatex">\(2 ^ i -1\)</span> 的祖先编号的第 <span class="arithmatex">\(2^i - 1\)</span> 辈祖先的编号。而 <span class="arithmatex">\(2^{i} = 2^{i - 1} + 2^{i - 1}\)</span> ，所以初始化为 <span class="arithmatex">\(fa[fa[u][i - 1]][i - 1]\)</span> 。（这虽然有些绕，但是确实是这样的……）</p>
 <h3 id="lca_1">LCA 函数的改变</h3>
 <p>在 LCA 函数里主要有两处改变，第一处是在 u 自己向上<strong>一步一步</strong>变成<strong>跳</strong>， 这将变成这个样子：</p>
-<pre><code class="language-cpp">for (int i = 30; i &gt;= 0; i++) {
+<pre><code class="language-cpp">for (int i = 30; i &gt;= 0; i--) {
     if (dep[fa[u][i]] &gt;= dep[v]) u = fa[u][i];
 }
 </code></pre>
 <p>这个其实很好理解，就是判断如果 u 向上跳 <span class="arithmatex">\(2^{i}\)</span> 辈的深度还是比 v 深或者相同，那么就跳。换句话说就是只要跳完之后的深度不超过 v 就可以跳。</p>
-<p>第二处改变是在</p>
+<p>第二处改变是在 u 和 v 同深度时，一起向上<strong>走</strong>变成一起向上<strong>跳</strong>，这将变成这个样子：</p>
+<pre><code class="language-cpp">for (int i = 30; i &gt;= 0; i--) {
+    if (fa[u][i] ^ fa[v][i]) {
+        u = fa[u][i];
+        v = fa[v][i];
+    }
+}
+return fa[u][0];
+</code></pre>
+<p><span class="arithmatex">\(\oplus\)</span> 的运算机制是相同为 0，不同为1。那么 <span class="arithmatex">\(fa[u][i] \oplus fa[v][i]\)</span> 这个表示的就是如果 <span class="arithmatex">\(fa[u][i]\)</span> 和 <span class="arithmatex">\(fa[v][i]\)</span> 相同，那么返回 0，否则返回 1。在 <code>if</code> 判别式里就是如果那两个相同，返回 <code>false</code>，否则返回 <code>true</code>。</p>
+<p>那么这个 <code>for</code> 循环意思就是将 u 和 v 都跳到还有一步就相遇的地方，答案就是 <span class="arithmatex">\(fa[u][0]\)</span> 或者 <span class="arithmatex">\(fa[v][0]\)</span> ，所以最后一行返回的是 <span class="arithmatex">\(fa[u][0]\)</span> （其实 <span class="arithmatex">\(fa[v][0]\)</span> 也可以）。</p>
+<h3 id="_5">时间复杂度</h3>
+<p>使用了倍增思想的 LCA 时间复杂度变快，由于预处理变成了 <span class="arithmatex">\(O(n \ log \ n)\)</span>，单次查询的时间复杂度降到了 <span class="arithmatex">\(O(log \ n)\)</span>。</p>
 
 
 
