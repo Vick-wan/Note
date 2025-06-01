@@ -32,17 +32,19 @@ nav:
   - Basic:
     - Priority of operations: Note/Basic/Priority of operations.md
   - Data Structure:
-    - Queue: about.md
-    - Stack: about.md
+    - DSU: Note/Data_structure/DSU.md
+    - Trie: Note/Data_structure/Trie.md
   - DP: about.md
   - Math: about.md
   - Graph:
     - Types of Graph: 
       - DAG: Note/Graph/Types of Graph/DAG.md
-    - DSU: Note/Graph/DSU.md
     - Topological sorting: Note/Graph/Topological sorting.md
-    - Meet in the middle: Note/Graph/Meet in the middle.md
-    - Trie: Note/Graph/Trie.md
+  - Search:
+    - BFS: Note/Search/BFS.md
+    - Meet in the middle: Note/Search/Meet in the middle.md
+  - Tree:
+    - LCA: Note/Tree/LCA.md
   - 指南: guides/install.md
   - 关于: about.md
 

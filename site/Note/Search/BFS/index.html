@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../../Graph/Topological%20sorting/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+        <link rel="next" href="../Meet%20in%20the%20middle/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Floyd - Vick's Wiki</title>
+        <title>BFS - Vick's Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bfs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Vick&#39;s Wiki" class="md-header__button md-logo" aria-label="Vick's Wiki" data-md-component="logo">
+    <a href="../../.." title="Vick&#39;s Wiki" class="md-header__button md-logo" aria-label="Vick's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c-.34.34-.67.67-.68 1-.03.32.31.65.63.96.48.5.95.95.93 1.44s-.53 1-1.04 1.5l-4.13 4.14L15 14.66l4.25-4.24-.96-.96-1.42 1.41-3.75-3.75 3.84-3.83c.39-.39 1.04-.39 1.41 0l2.34 2.34c.39.37.39 1.02 0 1.41M3 17.25l9.56-9.57 3.75 3.75L6.75 21H3z"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Floyd
+              BFS
             
           </span>
         </div>
@@ -196,7 +205,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -217,7 +226,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Basic/Priority%20of%20operations/" class="md-tabs__link">
+        <a href="../../Basic/Priority%20of%20operations/" class="md-tabs__link">
           
   
   
@@ -237,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../about.md" class="md-tabs__link">
+        <a href="../../Data_structure/DSU/" class="md-tabs__link">
           
   
   
@@ -255,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../about.md" class="md-tabs__link">
+      <a href="../../../about.md" class="md-tabs__link">
         
   
   
@@ -274,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../about.md" class="md-tabs__link">
+      <a href="../../../about.md" class="md-tabs__link">
         
   
   
@@ -302,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Types%20of%20Graph/DAG/" class="md-tabs__link">
+        <a href="../../Graph/Types%20of%20Graph/DAG/" class="md-tabs__link">
           
   
   
@@ -321,9 +330,51 @@
   
   
   
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Search
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Tree/LCA/" class="md-tabs__link">
+          
+  
+  
+  Tree
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
   
     <li class="md-tabs__item">
-      <a href="../../../../guides/install.md" class="md-tabs__link">
+      <a href="../../../guides/install.md" class="md-tabs__link">
         
   
   
@@ -342,7 +393,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../about.md" class="md-tabs__link">
+      <a href="../../../about.md" class="md-tabs__link">
         
   
   
@@ -377,7 +428,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Vick&#39;s Wiki" class="md-nav__button md-logo" aria-label="Vick's Wiki" data-md-component="logo">
+    <a href="../../.." title="Vick&#39;s Wiki" class="md-nav__button md-logo" aria-label="Vick's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c-.34.34-.67.67-.68 1-.03.32.31.65.63.96.48.5.95.95.93 1.44s-.53 1-1.04 1.5l-4.13 4.14L15 14.66l4.25-4.24-.96-.96-1.42 1.41-3.75-3.75 3.84-3.83c.39-.39 1.04-.39 1.41 0l2.34 2.34c.39.37.39 1.02 0 1.41M3 17.25l9.56-9.57 3.75 3.75L6.75 21H3z"/></svg>
@@ -395,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -458,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Basic/Priority%20of%20operations/" class="md-nav__link">
+      <a href="../../Basic/Priority%20of%20operations/" class="md-nav__link">
         
   
   
@@ -529,12 +580,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about.md" class="md-nav__link">
+      <a href="../../Data_structure/DSU/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Queue
+    DSU
     
   </span>
   
@@ -552,12 +603,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about.md" class="md-nav__link">
+      <a href="../../Data_structure/Trie/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Stack
+    Trie
     
   </span>
   
@@ -582,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about.md" class="md-nav__link">
+      <a href="../../../about.md" class="md-nav__link">
         
   
   
@@ -604,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about.md" class="md-nav__link">
+      <a href="../../../about.md" class="md-nav__link">
         
   
   
@@ -708,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Types%20of%20Graph/DAG/" class="md-nav__link">
+      <a href="../../Graph/Types%20of%20Graph/DAG/" class="md-nav__link">
         
   
   
@@ -739,30 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DSU/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    DSU
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Topological%20sorting/" class="md-nav__link">
+      <a href="../../Graph/Topological%20sorting/" class="md-nav__link">
         
   
   
@@ -778,6 +806,166 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Search
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    BFS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    BFS
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      优化1：双向搜索
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="优化1：双向搜索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      观察
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -785,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Meet%20in%20the%20middle/" class="md-nav__link">
+      <a href="../Meet%20in%20the%20middle/" class="md-nav__link">
         
   
   
@@ -801,6 +989,54 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tree
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -808,12 +1044,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Trie/" class="md-nav__link">
+      <a href="../../Tree/LCA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Trie
+    LCA
     
   </span>
   
@@ -838,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/install.md" class="md-nav__link">
+      <a href="../../../guides/install.md" class="md-nav__link">
         
   
   
@@ -860,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about.md" class="md-nav__link">
+      <a href="../../../about.md" class="md-nav__link">
         
   
   
@@ -892,6 +1128,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      优化1：双向搜索
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="优化1：双向搜索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      观察
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -907,9 +1195,59 @@
 
 
 
-  <h1>Floyd</h1>
+<h1 id="bfs">BFS</h1>
+<p>广度优先搜索 (Breadth First Search) ，字面意思就是由广度优先的搜索方式。DFS是使用的 “不撞南墙不回头”，BFS 使用的是哪个店离自己距离越近，就先搜索那个点。</p>
+<p>BFS 的实现是利用队列 <code>Queue</code> 来实现的，每次加入离自己距离最近的点，然后依次取出队列头进行相同的操作。下面是一个 BFS 的基本框架：</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+const int MAXN = 10005;
+
+int vis[MAXN], dis[MAXN];
+queue&lt;int&gt; q; // BFS需要的队列
+vector&lt;int&gt; g[MAXN]; // 这里使用邻接表存储，也可以使用其他的存储方式。
+
+void bfs(int st) {
+    vis[st] = 1, dis[st] = 0;
+    q.push(st);
+
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+
+        for (auto v : g[u]) { // v为下一个节点
+            if (!vis[v]) {
+                vis[v] = 1;
+                dis[v] = dis[u] + 1;
+                q.push(v);
+            }
+        }
+    }
+}
+</code></pre>
+<h2 id="1">优化1：双向搜索</h2>
+<h3 id="_1">观察</h3>
+<p>在普通 <code>BFS</code> 时我们经常是从起点一点一点加边到终点。在加边的过程中，我们不管有多少边，就都都加进去了。但是遇到这样的图，我们就可能会超时：
+<img alt="image lost" src="../../../assets/images/BFS1.png" /></p>
+<p>这样发现，如果我们从终点开始搜索会更快，于是 <code>BFS</code> 改为从终点 <span class="arithmatex">\(\to\)</span> 起点，于是我们又遇到了一个问题，如果图张这样，那么我们还是会超时：
+<img alt="image lost" src="../../../assets/images/BFS2.png" /></p>
+<p>但是这样我们又发现，这样从起点开始比较好，更快。</p>
+<h3 id="_2">总结</h3>
+<p>总结发现在写 <code>BFS</code> 时，不能直接从起点或终点出发，否则会遇到上面两种情况，会导致 <code>TLE</code>。</p>
+<p>所以使用双向搜索来优化 <code>BFS</code>，这个用法是在优化 <code>BFS</code> 时可能要使用的，实现是从两侧展开分枝，哪边分枝少就从哪边展开。</p>
+<h3 id="code">Code</h3>
+<p>下面是使用了双向搜索优化的 <code>BFS</code> 代码：</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main() {
 
 
+    return 0;
+}
+</code></pre>
+<h1 id="0-1bfs-bfs">0-1BFS / 双端队列 BFS</h1>
+<p>双端队列 BFS 就是使用双端队列的 BFS，但是有什么用呢？</p>
 
 
 
@@ -964,10 +1302,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
