@@ -95,9 +95,17 @@ bool merge(int x, int y) { // 返回true就是没有环，返回false就是有�
 
 ## 例题
 ### 基础并查集
-- [P3367【模板】并查集](https://www.luogu.com.cn/problem/P3367)
-- [P2078 朋友](https://www.luogu.com.cn/problem/P2078)
-- [P1111 修复公路](https://www.luogu.com.cn/problem/P1111)
-- [P2256 一中校运会之百米跑](https://www.luogu.com.cn/problem/P2256)
+- <a href="https://www.luogu.com.cn/problem/P3367" target="_blank" rel="noopener noreferrer">
+    P3367 【模板】并查集
+</a>
+- <a href="https://www.luogu.com.cn/problem/P2078" target="_blank" rel="noopener noreferrer">
+    P2078 朋友
+</a>
+- <a href="https://www.luogu.com.cn/problem/P1111" target="_blank" rel="noopener noreferrer">
+    P1111 修复公路
+</a>
+- <a href="https://www.luogu.com.cn/problem/P2256" target="_blank" rel="noopener noreferrer">
+    P2256 一中校运会之百米跑
+</a>
 ### 带权并查集
 ### 扩展域并查集

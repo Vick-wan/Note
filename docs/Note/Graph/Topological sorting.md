@@ -64,7 +64,12 @@ vector<int> topsort() {
 ## 例题
 以下是拓扑排序的经典简单的题目：
 
-- [B3644 【模板】拓扑排序/家谱树](https://www.luogu.com.cn/problem/B3644)
-- [P4017 最大食物链计数](https://www.luogu.com.cn/problem/P4017)
-- [P1347 排序](https://www.luogu.com.cn/problem/P1347)
-- 
+- <a href="https://www.luogu.com.cn/problem/B3644" target="_blank" rel="noopener noreferrer">
+    B3644 【模板】拓扑排序/家谱树
+</a>
+- <a href="https://www.luogu.com.cn/problem/P4017" target="_blank" rel="noopener noreferrer">
+    P4017 最大食物链计数
+</a>
+- <a href="https://www.luogu.com.cn/problem/P1347" target="_blank" rel="noopener noreferrer">
+    P1347 排序
+</a>
