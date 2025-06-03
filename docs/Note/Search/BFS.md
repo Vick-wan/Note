@@ -53,10 +53,76 @@ void bfs(int st) {
 using namespace std;
 
 int main() {
-	
-	
+
 	return 0;
 }
 ```
 # 0-1BFS / 双端队列 BFS
-双端队列 BFS 就是使用双端队列的 BFS，但是有什么用呢？
+## 问题
+现在有一个问题，题目描述如下：
+
+>有一张 `n` 个点 `m` 条边的无向图，边权为 0 或 1，问从节点 1 到节点 `n` 的最短距离。
+
+## 观察
+这道题**仅有**两个边权的可能性，如果我们使用 `BFS` ，那么会有问题 $\to$ 答案不是最优解（因为边权可能不一样），所以我们需要先让边权较小者（0）进入，而边权较大者后入（1），这个时候就可以使用 `01BFS` 了。
+
+双端队列 BFS 就是使用双端队列的 `BFS`，可以实现有两种花费的路径进行 `BFS`，具体实现是用一个双端队列，将花费较小的元素放在队列前端，花费较大的放在尾端，这样维持了 `BFS` 的单调性，满足了 `BFS` 的基本需求。
+## 总结
+发现边权只有两个可能性，而使用 `01BFS` 来维护单调性，使得答案正确。
+## Code
+下面是一份用 `01BFS` 的主要框架。
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 1e5 + 5;
+
+struct E {
+	int v, w; // v是下一个节点，w是边权
+};
+
+vector<E> g[MAXN]; // 假设使用邻接表存储
+deque<int> q; // 创建一个双端队列
+int vis[MAXN], dis[MAXN];
+void bfs(int st) {
+	for (int i = 1; i <= n; i++) dis[i] = (int)1e9;
+	vis[st] = 1;
+	dis[st] = 0;
+	q.push_front(st);
+
+	while (!q.empty()) {
+		int u = q.front();
+		q.pop_front();
+
+		for (auto e : g[u]) {
+			int v = e.v, w = e.w;
+
+			if (vis[v]) continue;
+			vis[v] = 1;
+
+			dis[v] = dis[u] + w;
+			if (w == 0) q.push_front(v);
+			else q.push_back(v);
+		}
+	}
+}
+```
+## 时间复杂度
+## BFS
+## 双向搜索优化BFS
+## 01-BFS
+- <a href="https://www.luogu.com.cn/problem/P1141" target="_blank" rel="noopener noreferrer">
+    P1141 01迷宫
+</a>
+- <a href="https://www.luogu.com.cn/problem/P4554" target="_blank" rel="noopener noreferrer">
+    P4554 小明的游戏
+</a>
+- <a href="https://www.luogu.com.cn/problem/P1332" target="_blank" rel="noopener noreferrer">
+    P1332 血色先锋队
+</a>
+- <a href="https://www.luogu.com.cn/problem/P1849" target="_blank" rel="noopener noreferrer">
+    P1849 [USACO12MAR] Tractor S
+</a>
+- <a href="https://www.luogu.com.cn/problem/CF590C" target="_blank" rel="noopener noreferrer">
+    CF590C Three States
+</a>

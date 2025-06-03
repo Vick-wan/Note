@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Note/Search/BFS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "BFS"
             }
           }
         ],
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "Note/Search/BFS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "index 的大纲"
+              "title": "BFS 的大纲"
             }
           }
         ],
@@ -184,16 +184,17 @@
   "active": "c78df92065e9bf37",
   "lastOpenFiles": [
     "Markdown 基本操作.md",
+    "Note/Search/BFS.md",
+    "Note/Imput&Output/Fast Input & Output.md",
+    "Note/Tree/LCA.md",
+    "Latex 基本操作.md",
+    "Note/Search/Meet in the middle.md",
+    "index.md",
     "Note/Data_structure/Trie.md",
     "Note/Data_structure/DSU.md",
     "Note/Graph/Topological sorting.md",
-    "Note/Search/BFS.md",
-    "Note/Search/Meet in the middle.md",
-    "Note/Tree/LCA.md",
-    "Latex 基本操作.md",
     "about.md",
     "guides.md",
-    "index.md",
     "Note/如何使用 mkdocs 并且同步到 github.md",
     "assets/images/topological_sorting1.png",
     "assets/images/LCA1.png",
@@ -208,7 +209,6 @@
     "Note/Basic/Binary Search.md",
     "Note/Basic/Priority of operations.md",
     "Note/Graph/Types of Graph/DAG.md",
-    "Note/Imput&Output/Fast Input & Output.md",
     "珍珠港事件.md",
     "Note/Untitled.md",
     "Note/Graph/Shotest path/Floyd.md",

@@ -81,7 +81,8 @@ $\oplus$ 的运算机制是相同为 0，不同为1。那么 $fa[u][i] \oplus fa
 那么这个 `for` 循环意思就是将 u 和 v 都跳到还有一步就相遇的地方，答案就是 $fa[u][0]$ 或者 $fa[v][0]$ ，所以最后一行返回的是 $fa[u][0]$ （其实 $fa[v][0]$ 也可以）。
 ### 时间复杂度
 使用了倍增思想的 LCA 时间复杂度变快，由于预处理变成了 $\varTheta(n \ log \ n)$，单次查询的时间复杂度降到了 $\varTheta(log \ n)$。
-
+## 个人感悟
+LCA 这个
 ## 例题
 - <a href="https://www.luogu.com.cn/problem/P3379" target="_blank" rel="noopener noreferrer">
     P3379 【模板】最近公共祖先（LCA）

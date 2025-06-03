@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#latex" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -946,6 +951,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      普通运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      大型运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      希腊字母
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      省略号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      间距
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      箭头
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -961,19 +1030,45 @@
 
 
 
-  <h1>Latex 基本操作</h1>
-
+<h1 id="latex">Latex 基本操作</h1>
 <p>Latex公式是在两个美元符号之间或者公式块里完成的。
 <span class="arithmatex">\(这里面输入公式\)</span>
 $$
 这是一个公式块，里面可以输入公式
-$$
-<code>\LaTeX</code> : <span class="arithmatex">\(\LaTeX\)</span>
-<code>+</code> : <span class="arithmatex">\(+\)</span>
+$$</p>
+<h2 id="_1">普通运算符</h2>
+<p><code>+</code> : <span class="arithmatex">\(+\)</span>
 <code>-</code> : <span class="arithmatex">\(-\)</span>
 <code>\times</code> : <span class="arithmatex">\(\times\)</span>
 <code>\div</code> : <span class="arithmatex">\(\div\)</span> 
+<code>\%</code> : <span class="arithmatex">\(\%\)</span>
+<code>\#</code> : <span class="arithmatex">\(\#\)</span>
+<code>\&amp;</code> : <span class="arithmatex">\(\&amp;\)</span>
 <code>\oplus</code> : <span class="arithmatex">\(\oplus\)</span></p>
+<h2 id="_2">大型运算符</h2>
+<p><strong>请注意，如果需要强制将限制放在上下，那么需要在函数后面加<code>\limits</code></strong>。如：<span class="arithmatex">\(\sum\limits_{i = 0}^{n}\)</span>
+<code>\sum_{i = 0}^{n}{a[i]}</code> : <span class="arithmatex">\(\sum_{i=0}^{n}{a[i]}\)</span>
+<code>\prod_{i = 1}^{n}{p[i]}</code> : <span class="arithmatex">\(\prod_{i = 1}^{n}{p[i]}\)</span>
+<code>\int</code> : <span class="arithmatex">\(\int\)</span>
+<code>\iint</code> : <span class="arithmatex">\(\iint\)</span>
+<code>\iiint</code> : <span class="arithmatex">\(\iiint\)</span>
+<code>\oint</code> : <span class="arithmatex">\(\oint\)</span>
+<code>\int_{-\infty}^{0} {f(x)\,\rm d x}</code> : <span class="arithmatex">\(\int_{-\infty}^{0} {f(x)\,\rm d x}\)</span></p>
+<h2 id="_3">希腊字母</h2>
+<h2 id="_4">省略号</h2>
+<p><code>\cdots</code> : <span class="arithmatex">\(\cdots\)</span>
+<code>\vdots</code> : <span class="arithmatex">\(\vdots\)</span>
+<code>\ddots</code> : <span class="arithmatex">\(\ddots\)</span>
+``</p>
+<h2 id="_5">间距</h2>
+<p><strong>请注意， 这里的 a 没有任何含义，两个 a 之间的距离展示了这个间距的大小。</strong>
+<code>a\,a</code> : <span class="arithmatex">\(a\,a\)</span>
+<code>a\ a</code> : <span class="arithmatex">\(a\ a\)</span>
+<code>a\quad a</code> : <span class="arithmatex">\(a\quad a\)</span>
+<code>a\qquad a</code> : <span class="arithmatex">\(a\qquad a\)</span></p>
+<h2 id="_6">箭头</h2>
+<p><code>\to</code> : <span class="arithmatex">\(\to\)</span>
+<code>\gets</code> : <span class="arithmatex">\(\gets\)</span></p>
 
 
 

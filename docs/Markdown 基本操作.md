@@ -8,9 +8,11 @@
 
 图片引用格式：`![]()`
 超链接引用公式：`[]()`
-超链接，在新窗口显示：<a href="https://example.com" target="_blank" rel="noopener noreferrer">
+超链接（HTML版），在新窗口显示：
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">
     这个网页会在新的窗口打开
 </a>
+
 - `-`负号在前是无序列表
 1. 数字+点是有序列表
 - [ ] `- [ ]` 是计划任务，如果完成就是`- [x]`
