@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../Types%20of%20Graph/DAG/">
-      
-      
-        <link rel="next" href="../../Search/BFS/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Topological sorting - Vick's Wiki</title>
+        <title>Bellman-Ford - Vick's Wiki</title>
       
     
     
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#khan" class="md-skip">
+        <a href="#bellman-ford" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Topological sorting
+              Bellman-Ford
             
           </span>
         </div>
@@ -262,7 +258,25 @@
   
   
   
+  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../DP/%E8%83%8C%E5%8C%85/" class="md-tabs__link">
+          
+  
+  
+  DP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
   
   
     
@@ -271,12 +285,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../Types%20of%20Graph/DAG/" class="md-tabs__link">
           
   
@@ -594,29 +606,95 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            DP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DP/%E8%83%8C%E5%8C%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    背包
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -629,8 +707,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Graph
           </label>
@@ -654,10 +732,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -670,8 +748,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Types of Graph
           </label>
@@ -712,264 +790,15 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Topological sorting
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Topological sorting
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#khan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Khan 算法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Khan 算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      观察
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="观察">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dag" class="md-nav__link">
-    <span class="md-ellipsis">
-      DAG中的拓扑序列
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      有向图（可能有环）
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      总结
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="总结">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      拓扑排序序列
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      判环
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dp" class="md-nav__link">
-    <span class="md-ellipsis">
-      拓扑排序+DP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      有要求的拓扑排序
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      例题
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Search
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Search
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../../Search/BFS/" class="md-nav__link">
+      <a href="../%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    BFS
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Search/Meet%20in%20the%20middle/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Meet in the middle
+    拓扑排序
     
   </span>
   
@@ -1013,7 +842,7 @@
   
   
   <span class="md-ellipsis">
-    Tree
+    Search
     
   </span>
   
@@ -1023,6 +852,100 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/BFS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BFS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    双向搜索
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tree
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Tree
           </label>
@@ -1119,6 +1042,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1127,82 +1052,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#khan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Khan 算法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Khan 算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      观察
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="观察">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dag" class="md-nav__link">
-    <span class="md-ellipsis">
-      DAG中的拓扑序列
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      有向图（可能有环）
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      总结
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="总结">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      拓扑排序序列
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      判环
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#code" class="md-nav__link">
     <span class="md-ellipsis">
       Code
@@ -1210,34 +1059,11 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#dp" class="md-nav__link">
+  <a href="#spfa" class="md-nav__link">
     <span class="md-ellipsis">
-      拓扑排序+DP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      有要求的拓扑排序
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      例题
+      SPFA
     </span>
   </a>
   
@@ -1259,77 +1085,12 @@
 
 
 
-  <h1>Topological sorting</h1>
-
-<p>拓扑排序 <span class="arithmatex">\({\rm (Topological~sorting)}\)</span> 是给一个有向无环图也就是 <span class="arithmatex">\(\rm DAG\)</span> 所有的点进行一个排序。假设在一个 <code>DAG</code> 里有两个点 <code>u</code>，<code>v</code> 使得有一条有边，则称 <code>v</code> 依赖于 <code>u</code> 。拓扑排序的目标是将所有点按照某一个顺序排序，使得排在后面的点不再被依赖于前面的点。</p>
-<h2 id="khan">Khan 算法</h2>
-<h3 id="_1">观察</h3>
-<h4 id="dag">DAG中的拓扑序列</h4>
-<p>在<code>DAG</code> 中发现一个入度为 <code>0</code> 的点一定不会被依赖，所以我们可以先将入度为 <code>0</code> 的点放在拓扑排序序列的最前面。</p>
-<p>接下来，所有被依赖于所有入度为 <code>0</code> 的点会加入拓扑排序序列，因为依赖它们的顶点已经在序列里了。</p>
-<p>然后，所有被依赖于所有被依赖于所有入度为 <code>0</code>的点会加入<span class="arithmatex">\(\dots\)</span></p>
-<p><span class="arithmatex">\(\vdots\)</span>
-最后，没有点入度为 <code>0</code>，拓扑排序结束。
-我们发现依次访问的顺序就是拓扑排序序列。</p>
-<h4 id="_2">有向图（可能有环）</h4>
-<p>如果是一个有向图（可能有环）会发生什么事情呢？我们分析下面的例子：
-<img alt="image lost" src="../../../assets/images/topological_sorting1.png" /></p>
-<p>我们可以发现下面的例子进行到第 0 步时入度都不为 0，直接结束了，如果拓扑排序结束而且还有点没有被访问，那就说明这个图有环。</p>
-<h3 id="_3">总结</h3>
-<h4 id="_4">拓扑排序序列</h4>
-<p>每次找到图中入度为 0 的点，删除这个点和这个点所被依赖的边。重复以上操作直到没有入度为 0 的点。访问的顺序就是构造的拓扑排序序列</p>
-<h4 id="_5">判环</h4>
-<p>如果在拓扑排序某一步结束了，而且还有点没被访问，说明此图有环。</p>
-<h3 id="code">Code</h3>
-<p>先存所有一开始入度为0的点，放入一个队列 <code>q</code> 里。然后一次取出入度为 <code>0</code> 的点也就是<code>u</code>，删去依赖于<code>u</code>的点<code>v</code>与点 <code>u</code>的边使得 <code>v</code>的入度 <code>-1</code>。如果 <code>v</code> 的入度为 <code>0</code> ，加入队列 <code>q</code> 并重复此操作。</p>
-<pre><code class="language-cpp">vector&lt;int&gt; g[MAXN]; // 邻接表
-int indegree[MAXN]; // 每一个点的入度
-queue&lt;int&gt; q; // 队列
-
-vector&lt;int&gt; topsort() {
-    for (int i = 1; i &lt;= n; i++) {
-        for (auot j : g[i]) { // 一条i -&gt; j的边
-            d[j]++;
-        }
-    }
-
-    for (int i = 1; i &lt;= n; i++) {
-        if (d[i] == 0) q.push(i); // 加入入度为0的点
-    }
-
-    vector&lt;int&gt; topseq;
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
-
-        topseq.push_back(u); // 将节点u加入拓扑排序序列
-
-        for (auto v : g[u]) {
-            d[v]--;
-            if (d[v] == 0) q.push(v);
-        }
-    }
-
-    return topseq; // 返回拓扑排序序列
-}
-</code></pre>
-<h2 id="dp">拓扑排序+DP</h2>
-<p>待更新</p>
-<h2 id="_6">有要求的拓扑排序</h2>
-<p>待更新</p>
-<h2 id="_7">例题</h2>
-<p>以下是拓扑排序的经典简单的题目：</p>
-<ul>
-<li><a href="https://www.luogu.com.cn/problem/B3644" target="_blank" rel="noopener noreferrer">
-    B3644 【模板】拓扑排序/家谱树
-</a></li>
-<li><a href="https://www.luogu.com.cn/problem/P4017" target="_blank" rel="noopener noreferrer">
-    P4017 最大食物链计数
-</a></li>
-<li><a href="https://www.luogu.com.cn/problem/P1347" target="_blank" rel="noopener noreferrer">
-    P1347 排序
-</a></li>
-</ul>
+<h1 id="bellman-ford">Bellman-Ford</h1>
+<h2 id="code">Code</h2>
+<h2 id="spfa">SPFA</h2>
+<h1 id="dijkstra">Dijkstra</h1>
+<h1 id="floyd">Floyd</h1>
+<h1 id="johnson">Johnson</h1>
 
 
 

@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../../Data_structure/Trie/">
+      
+      
+        <link rel="next" href="../../Graph/Types%20of%20Graph/DAG/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Fast Input & Output - Vick's Wiki</title>
+        <title>背包 - Vick's Wiki</title>
       
     
     
@@ -68,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fast-input-output" class="md-skip">
+        <a href="#01" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fast Input &amp; Output
+              背包
             
           </span>
         </div>
@@ -247,6 +251,28 @@
   
   
   Data Structure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  DP
 
         </a>
       </li>
@@ -586,6 +612,213 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    DP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            DP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    背包
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    背包
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      01 背包
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="01 背包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      滚动数组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="滚动数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      观察
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂度
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -600,10 +833,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -616,8 +849,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Graph
           </label>
@@ -641,10 +874,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -657,8 +890,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Types of Graph
           </label>
@@ -702,106 +935,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Graph/Topological%20sorting/" class="md-nav__link">
+      <a href="../../Graph/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Topological sorting
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Search
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Search
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Search/BFS/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    BFS
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Search/Meet%20in%20the%20middle/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Meet in the middle
+    拓扑排序
     
   </span>
   
@@ -845,7 +984,7 @@
   
   
   <span class="md-ellipsis">
-    Tree
+    Search
     
   </span>
   
@@ -855,6 +994,100 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/BFS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BFS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    双向搜索
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tree
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Tree
           </label>
@@ -951,8 +1184,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -961,11 +1192,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#01" class="md-nav__link">
     <span class="md-ellipsis">
-      关闭同步
+      01 背包
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="01 背包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      滚动数组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="滚动数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      观察
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂度
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -985,9 +1300,51 @@
 
 
 
-<h1 id="fast-input-output">Fast Input &amp; Output</h1>
-<h2 id="_1">关闭同步</h2>
-<p>关闭同步可以让代码运行时间变短，</p>
+  <h1>背包</h1>
+
+<h2 id="01">01 背包</h2>
+<blockquote>
+<p>题目简介：有 <code>N</code> 个物品和一个容量为 <code>W</code> 的背包，每个物品价值为 <code>w[i]</code>， 重量为 <code>v[i]</code> 。在选出若干个物品在满足容量不超过 <code>W</code> 时，求最大价值是多少？</p>
+</blockquote>
+<p>这是最基础的背包问题，观察后发现每个物品要么选（1），要么不选（0），所以我们通常称这种题型为 01背包。</p>
+<h3 id="_1">思路</h3>
+<p>我们可以定义一个状态：<code>dp[i][j]</code> 代表前 <code>i</code> 个物品选恰好容量为 <code>j</code> 的背包里可以获得的最大价值。那么决策显然为两个：选或不选。如果选择装入当前物品，那么我们需要让背包腾出至少 <code>c[i]</code> 个容量用于装这个物品，而价值则加上这个物品的价值，即 <code>v[i]</code>。如果不选择装入当前物品，那么就是同样的空间装前 <code>i - 1</code> 个物品。</p>
+<p>我们可以画一个表格来直接的理解：
+<img alt="image lost" src="../../../assets/images/knapsack1.png" /></p>
+<p>通过整理和表格我们发现状态转移如下：
+$$
+dp[i][j] = max\begin{cases}
+dp[i - 1][j] \
+dp[i - 1][j - c[i]] + v[i]
+\end{cases}
+$$</p>
+<h3 id="code">Code</h3>
+<p>下面是一个 01背包在转移时代码：</p>
+<pre><code class="language-cpp">for (int i = 1; i &lt;= n; i++) {
+    for (int j = c[i]; j &lt;= W; j++) {
+        dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - c[i]] + v[i])
+    }
+}
+</code></pre>
+<h3 id="_2">复杂度</h3>
+<p>这样的时间复杂度是 <span class="arithmatex">\(O(NW)\)</span>，空间复杂度为 <span class="arithmatex">\(O(NW)\)</span>。</p>
+<h3 id="_3">滚动数组</h3>
+<p>01 背包的时间复杂度是不可优化的了，而空间复杂度可以优化为 <span class="arithmatex">\(O(W)\)</span> ，这个时候我们就需要使用滚动数组了。</p>
+<h4 id="_4">观察</h4>
+<p>通过观察发现 <code>dp[i][j]</code> 只可能是从上一行而且不超过这一列转移过来。具体来说 <code>dp[i][j]</code> 只可能是从 <code>dp[u][v]</code> 转移过来且 <span class="arithmatex">\(1 \le u \le i - 1, \ 1 \le v \le j\)</span> 。所以我们可以把 <code>N</code> 行压成 1 行，但是我们需要倒序来保证不把之前的覆盖。</p>
+<h4 id="code_1">Code</h4>
+<p>下面是一个使用了滚动数组的 01背包：</p>
+<pre><code class="language-cpp">for (int i = 1; i &lt;= n; i++) {
+    for (int j = W; j &gt;= c[i]; j--) {
+        dp[j] = max(dp[j], dp[j - c[i]] + v[i]);
+    }
+}
+</code></pre>
+<h4 id="_5">复杂度</h4>
+<p>时间复杂度无法进行优化，即 <span class="arithmatex">\(O(NW)\)</span> ，空间复杂度为 <span class="arithmatex">\(O(W)\)</span></p>
+<h3 id="_6">总结</h3>
+<p>01 背包是一个只有两个决策（选或不选）的背包。</p>
+<p>状态转移：<strong>减去话费获得价值</strong>。</p>
 
 
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Note/Graph/Shortest path.md",
+                "file": "Markdown 基本操作.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Shortest path"
+              "title": "Markdown 基本操作"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Note/Search/BFS.md",
+                "file": "Note/DP/背包.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BFS"
+              "title": "背包"
             }
           }
         ],
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Note/Search/BFS.md",
+                "file": "Note/DP/背包.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BFS 的大纲"
+              "title": "背包 的大纲"
             }
           }
         ],
@@ -183,16 +183,28 @@
   },
   "active": "c78df92065e9bf37",
   "lastOpenFiles": [
-    "Markdown 基本操作.md",
-    "Note/Search/BFS.md",
-    "Note/Imput&Output/Fast Input & Output.md",
+    "assets/images/knapsack1.png",
+    "Note/Graph/Types of Graph/DAG.md",
+    "Note/Graph/拓扑排序.md",
+    "Note/Graph/最短路.md",
+    "Note/Graph/线段树.md",
     "Note/Tree/LCA.md",
+    "Note/Search/BFS.md",
+    "Note/Search/双向搜索.md",
+    "Note/Imput&Output/快读 Fast Input & Output.md",
+    "Note/DP/背包.md",
+    "Note/临时笔记.md",
+    "Note/DP/背包",
+    "Note/Untitled.md",
+    "Note/Basic/Binary Search.md",
+    "未命名.canvas",
+    "2025-06-21.md",
+    "Note/Basic/Priority of operations.md",
+    "Markdown 基本操作.md",
     "Latex 基本操作.md",
-    "Note/Search/Meet in the middle.md",
+    "Note/Data_structure/DSU.md",
     "index.md",
     "Note/Data_structure/Trie.md",
-    "Note/Data_structure/DSU.md",
-    "Note/Graph/Topological sorting.md",
     "about.md",
     "guides.md",
     "Note/如何使用 mkdocs 并且同步到 github.md",
@@ -203,21 +215,11 @@
     "assets/images/DAG1.png",
     "assets/images/BFS2.png",
     "assets/images/BFS1.png",
-    "Note/Graph/Shortest path.md",
-    "Note/Graph/Basic Segment Tree.md",
     "Note/Basic/Binary Lifting.md",
-    "Note/Basic/Binary Search.md",
-    "Note/Basic/Priority of operations.md",
-    "Note/Graph/Types of Graph/DAG.md",
     "珍珠港事件.md",
-    "Note/Untitled.md",
     "Note/Graph/Shotest path/Floyd.md",
-    "Note/Graph/Shotest path/Dijkstra.md",
-    "Note/Graph/Shotest path/Bellman-Ford & SPFA.md",
     "Note/Tree",
     "Note/Search",
-    "Note/Graph/DFS.md",
-    "Note/Basic/Binary search/Binary search.md",
     "Note/Basic/未命名",
     "Note/Basic/Binary search/Binary search image1.png",
     "Note/Graph/meet in the middle",
@@ -227,8 +229,6 @@
     "Note/Graph/Shotest path",
     "Note/Graph/Topsort",
     "assets/images",
-    "assets",
-    "Note/Graph/Types of Graph/DAG",
-    "未命名.canvas"
+    "assets"
   ]
 }

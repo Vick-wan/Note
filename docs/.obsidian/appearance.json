@@ -1,5 +1,7 @@
 {
   "theme": "moonstone",
-  "accentColor": "#40c9a7",
-  "enabledCssSnippets": []
+  "accentColor": "#4eccaa",
+  "enabledCssSnippets": [],
+  "textFontFamily": "",
+  "interfaceFontFamily": ""
 }
