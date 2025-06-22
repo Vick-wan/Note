@@ -1304,7 +1304,7 @@
 
 <h2 id="01">01 背包</h2>
 <blockquote>
-<p>题目简介：有 <code>N</code> 个物品和一个容量为 <code>W</code> 的背包，每个物品价值为 <code>w[i]</code>， 重量为 <code>v[i]</code> 。在选出若干个物品在满足容量不超过 <code>W</code> 时，求最大价值是多少？</p>
+<p>题目简介：有 <code>N</code> 个物品和一个容量为 <code>W</code> 的背包，每个物品价值为 <code>v[i]</code>， 重量为 <code>c[i]</code> 。在选出若干个物品在满足容量不超过 <code>W</code> 时，求最大价值是多少？</p>
 </blockquote>
 <p>这是最基础的背包问题，观察后发现每个物品要么选（1），要么不选（0），所以我们通常称这种题型为 01背包。</p>
 <h3 id="_1">思路</h3>
@@ -1314,7 +1314,8 @@
 <p>通过整理和表格我们发现状态转移如下：
 $$
 dp[i][j] = max\begin{cases}
-dp[i - 1][j] \
+dp[i - 1][j]
+\newline
 dp[i - 1][j - c[i]] + v[i]
 \end{cases}
 $$</p>
@@ -1344,7 +1345,7 @@ $$</p>
 <p>时间复杂度无法进行优化，即 <span class="arithmatex">\(O(NW)\)</span> ，空间复杂度为 <span class="arithmatex">\(O(W)\)</span></p>
 <h3 id="_6">总结</h3>
 <p>01 背包是一个只有两个决策（选或不选）的背包。</p>
-<p>状态转移：<strong>减去话费获得价值</strong>。</p>
+<p>状态转移：<strong>减去花费获得价值</strong>。</p>
 
 
 
