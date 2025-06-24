@@ -36,6 +36,7 @@ nav:
     - Trie: Note/Data_structure/Trie.md
   - DP:
     - 背包: Note/DP/背包.md
+    - 最长公共子序列: Note/DP/最长公共子序列.md
   - Graph:
     - Types of Graph: 
       - DAG: Note/Graph/Types of Graph/DAG.md

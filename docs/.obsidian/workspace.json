@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Note/DP/背包.md",
+                "file": "Note/DP/最长公共子序列.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "背包"
+              "title": "最长公共子序列"
             }
           }
         ],
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Note/DP/背包.md",
+                "file": "Note/DP/最长公共子序列.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "背包 的大纲"
+              "title": "最长公共子序列 的大纲"
             }
           }
         ],
@@ -183,25 +183,26 @@
   },
   "active": "c78df92065e9bf37",
   "lastOpenFiles": [
+    "Note/Search/BFS.md",
+    "Latex 基本操作.md",
+    "Markdown 基本操作.md",
+    "Note/DP/最长公共子序列.md",
+    "Note/临时笔记.md",
+    "Note/DP/背包.md",
     "assets/images/knapsack1.png",
     "Note/Graph/Types of Graph/DAG.md",
     "Note/Graph/拓扑排序.md",
     "Note/Graph/最短路.md",
     "Note/Graph/线段树.md",
     "Note/Tree/LCA.md",
-    "Note/Search/BFS.md",
     "Note/Search/双向搜索.md",
     "Note/Imput&Output/快读 Fast Input & Output.md",
-    "Note/DP/背包.md",
-    "Note/临时笔记.md",
     "Note/DP/背包",
     "Note/Untitled.md",
     "Note/Basic/Binary Search.md",
     "未命名.canvas",
     "2025-06-21.md",
     "Note/Basic/Priority of operations.md",
-    "Markdown 基本操作.md",
-    "Latex 基本操作.md",
     "Note/Data_structure/DSU.md",
     "index.md",
     "Note/Data_structure/Trie.md",
@@ -225,7 +226,6 @@
     "Note/Graph/meet in the middle",
     "assets/images/头像.jpg",
     "未命名",
-    "assets/images/berber.png",
     "Note/Graph/Shotest path",
     "Note/Graph/Topsort",
     "assets/images",
