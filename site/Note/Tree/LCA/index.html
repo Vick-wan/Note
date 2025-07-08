@@ -12,7 +12,7 @@
         <link rel="prev" href="../../Search/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/">
       
       
-        <link rel="next" href="../../../guides/">
+        <link rel="next" href="../../Imput%26Output/%E5%BF%AB%E8%AF%BB/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -226,7 +226,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Basic/Priority%20of%20operations/" class="md-tabs__link">
+        <a href="../../Basic/%E8%BF%90%E7%AE%97%E4%BC%98%E5%85%88%E7%BA%A7/" class="md-tabs__link">
           
   
   
@@ -343,6 +343,26 @@
   
   
   Tree
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Imput%26Output/%E5%BF%AB%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+  Imput & Output
 
         </a>
       </li>
@@ -491,12 +511,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Basic/Priority%20of%20operations/" class="md-nav__link">
+      <a href="../../Basic/%E8%BF%90%E7%AE%97%E4%BC%98%E5%85%88%E7%BA%A7/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Priority of operations
+    运算优先级
     
   </span>
   
@@ -1147,6 +1167,77 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Imput & Output
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Imput & Output
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Imput%26Output/%E5%BF%AB%E8%AF%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    快读
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../guides/" class="md-nav__link">
         
@@ -1378,7 +1469,8 @@ return fa[u][0];
 <h3 id="_5">时间复杂度</h3>
 <p>使用了倍增思想的 LCA 时间复杂度变快，由于预处理变成了 <span class="arithmatex">\(\varTheta(n \ log \ n)\)</span>，单次查询的时间复杂度降到了 <span class="arithmatex">\(\varTheta(log \ n)\)</span>。</p>
 <h2 id="_6">个人感悟</h2>
-<p>LCA 这个</p>
+<p><code>LCA</code> 这个算法适用于求出树上两点之间的距离，也可以找到两个点在树上的最近公共祖先。这个算法可以搭配 <code>DFS</code> 一起使用。也有一些操作需要 <code>LCA</code> ，比如树上前缀和和树上差分。</p>
+<p>总体而言， <code>LCA</code> 是一个可以让我们快速求出两个点的最近公共祖先的一个算法，也是让我们快速求出树上两个点的最短距离的方法。</p>
 <h2 id="_7">例题</h2>
 <ul>
 <li><a href="https://www.luogu.com.cn/problem/P3379" target="_blank" rel="noopener noreferrer">
@@ -1442,7 +1534,7 @@ return fa[u][0];
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "header.autohide", "navigation.top", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
