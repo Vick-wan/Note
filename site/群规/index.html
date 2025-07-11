@@ -1238,24 +1238,41 @@ PS：群管理员只负责维护群内和平，权利<strong>并不高人一等<
 <td>## 惩罚</td>
 <td></td>
 </tr>
+<tr>
+<td><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>flowchart TD
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    a([违规发生]) --&gt; J[管理员发现]
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    a --&gt; A[求助]
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    A --&gt; B[管理员接收求助]
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    B -- 违规 --&gt; C[判断违规程度]
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    J --&gt; C
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    B -- 未违规 --&gt; D([求助无效])
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    C -- 重度违规 --&gt; E[移除群聊5天&amp;道歉]
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    E --&gt; F{是否改正}
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    F -- 是 --&gt; G([恢复权限])
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    F -- 否(时间 × 2) --&gt; C
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    C -- 中度违规 --&gt; I[移除群聊1天&amp;道歉]
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    I --&gt; F
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    C -- 轻度违规 --&gt; H[道歉]
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    H --&gt; F
+</code></pre></div></td></tr></table></div></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<pre><code class="language-mermaid">flowchart TD
-    a([违规发生]) --&gt; J[管理员发现]
-    a --&gt; A[求助]
-    A --&gt; B[管理员接收求助]
-    B -- 违规 --&gt; C[判断违规程度]
-    J --&gt; C
-    B -- 未违规 --&gt; D([求助无效])
-    C -- 重度违规 --&gt; E[移除群聊5天&amp;道歉]
-    E --&gt; F{是否改正}
-    F -- 是 --&gt; G([恢复权限])
-    F -- 否(时间 × 2) --&gt; C
-    C -- 中度违规 --&gt; I[移除群聊1天&amp;道歉]
-    I --&gt; F
-    C -- 轻度违规 --&gt; H[道歉]
-    H --&gt; F
-</code></pre>
 <p><code>Update: 2025/6/28</code></p>
 
 

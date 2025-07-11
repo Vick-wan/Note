@@ -1409,32 +1409,53 @@
 <h2 id="_1">暴力法</h2>
 <p>如果要求 u 和 v 的 LCA 那么那个 LCA 一定同时出现在 u 到根节点的路径和 v 到根节点路径上，而且是第一个同时出现的位置。为了方便，思路就是先将 u 和 v 向上走到同一层，在一步一步向上移动，直到 u 和 v 相遇，这个相遇的点就一定是 u 和 v 的 LCA。</p>
 <p>想要让 u 和 v 跳到同一层，得先知道 u 和 v 是那一层。<span class="arithmatex">\(dep[u]\)</span> 表示节点 u 离根的距离（也就是深度）。然后需要处理一个 <span class="arithmatex">\(fa[u]\)</span> 数组代表 u 的父亲的节点编号。</p>
-<pre><code class="language-cpp">int dep[MAXN], fa[MAXN]; // 2^35 &gt;= 1e9, 所以够大了
-void initlca(int u, int f) { // f是u的父节点
-    dep[u] = dep[f] + 1;
-    fa[u] = f;
-
-    for (auto v : g[u]) { // 这里使用邻接表存储
-        if (v != fa) initlca(v, u);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">dep</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span><span class="w"> </span><span class="c1">// 2^35 &gt;= 1e9, 所以够大了</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">initlca</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// f是u的父节点</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">dep</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dep</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 这里使用邻接表存储</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">fa</span><span class="p">)</span><span class="w"> </span><span class="n">initlca</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>接下来就到了写 LCA 函数的时候了，第一步是将 u 和 v 一步一步挪到同一层。然后第二部是一起向上挪，直到挪到同一个点上。</p>
-<pre><code class="language-cpp">int LCA(int u, int v) {
-    if (dep[u] &lt; dep[v]) swap(u, v); // 为了方便,u的深度比v更深（u和v的顺序不造成影响）
-    while (dep[u] &gt; dep[v]) {
-        u = fa[u]; // 向上挪动
-    }
-
-    if (u == v) return u; // 如果直接挪到同一个节点了就返回LCA
-
-    while (u != v) {
-        u = fa[u];
-        v = fa[v];
-    }
-    return u;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">LCA</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dep</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dep</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="n">swap</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="c1">// 为了方便,u的深度比v更深（u和v的顺序不造成影响）</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">dep</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">dep</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">];</span><span class="w"> </span><span class="c1">// 向上挪动</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">u</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果直接挪到同一个节点了就返回LCA</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">];</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_2">时间复杂度</h3>
 <p>暴力法需要预处理整棵树，所以复杂度为 <span class="arithmatex">\(\varTheta(n)\)</span> ，而单次查询的复杂度为 <span class="arithmatex">\(\varTheta(n)\)</span>，因为如果树长成一条连，u 和 v 在两段求的时候需要一步一步向另一个节点挪，这样就是树的大小 <span class="arithmatex">\(n\)</span> 所以单次查询时间复杂度是 <span class="arithmatex">\(\varTheta(n)\)</span>，有些慢。</p>
 <h2 id="_3">倍增法</h2>
@@ -1442,29 +1463,40 @@ void initlca(int u, int f) { // f是u的父节点
 <p>使用倍增方法我们需要将之前 <span class="arithmatex">\(fa[u]\)</span> 数组多加一维变成 <span class="arithmatex">\(fa[u][i]\)</span>，表示 u 的 <span class="arithmatex">\(2^{i}\)</span> 辈祖先的节点编号，这可以帮助我们优化代码。</p>
 <h3 id="_4">初始化的改变</h3>
 <p>在初始化 <span class="arithmatex">\(fa\)</span> 数组时会用到一个 <code>for</code> 循环长下面这个样子：</p>
-<pre><code class="language-cpp">fa[u][0] = f;
-for (int i = 1; i &lt;= 30; i++) {
-    fa[u][i] = fa[fa[u][i - 1]][i - 1];
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]][</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><span class="arithmatex">\(fa[u][0] = f\)</span> 这很容易理解就是初始化 u 的父亲。但是这个 <code>for</code> 循环是什么意思呢？观察发现 <span class="arithmatex">\(fa[u][i - 1]\)</span> 是 u 向上的第 <span class="arithmatex">\(2^{i - 1}\)</span> 辈的节点编号，而 <span class="arithmatex">\(fa[fa[u][i - 1]][i - 1]\)</span> 表示的是 u 向上第 <span class="arithmatex">\(2^{i - 1}\)</span> 的祖先编号的第 <span class="arithmatex">\(2^{i - 1}\)</span> 辈祖先的编号。而 <span class="arithmatex">\(2^{i} = 2^{i - 1} + 2^{i - 1}\)</span> ，所以初始化为 <span class="arithmatex">\(fa[fa[u][i - 1]][i - 1]\)</span> 。（这虽然有些绕，但是确实是这样的……）</p>
 <h3 id="lca_1">LCA 函数的改变</h3>
-<p>在 LCA 函数里主要有两处改变，第一处是在 u 自己向上<strong>一步一步</strong>变成<strong>跳</strong>， 这将变成这个样子：</p>
-<pre><code class="language-cpp">for (int i = 30; i &gt;= 0; i--) {
-    if (dep[fa[u][i]] &gt;= dep[v]) u = fa[u][i];
-}
-</code></pre>
-<p>这个其实很好理解，就是判断如果 u 向上跳 <span class="arithmatex">\(2^{i}\)</span> 辈的深度还是比 v 深或者相同，那么就跳。换句话说就是只要跳完之后的深度不超过 v 就可以跳。</p>
-<p>第二处改变是在 u 和 v 同深度时，一起向上<strong>走</strong>变成一起向上<strong>跳</strong>，这将变成这个样子：</p>
-<pre><code class="language-cpp">for (int i = 30; i &gt;= 0; i--) {
-    if (fa[u][i] ^ fa[v][i]) {
-        u = fa[u][i];
-        v = fa[v][i];
-    }
-}
-return fa[u][0];
-</code></pre>
-<p><span class="arithmatex">\(\oplus\)</span> 的运算机制是相同为 0，不同为1。那么 <span class="arithmatex">\(fa[u][i] \oplus fa[v][i]\)</span> 这个表示的就是如果 <span class="arithmatex">\(fa[u][i]\)</span> 和 <span class="arithmatex">\(fa[v][i]\)</span> 相同，那么返回 0，否则返回 1。在 <code>if</code> 判别式里就是如果那两个相同，返回 <code>false</code>，否则返回 <code>true</code>。</p>
+<p>在 LCA 函数里主要有两处改变，第一处是在 u 自己向上<strong>一步一步</strong>变成<strong>跳</strong>， 这将变成这个样子：
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dep</span><span class="p">[</span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">dep</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+这个其实很好理解，就是判断如果 u 向上跳 <span class="arithmatex">\(2^{i}\)</span> 辈的深度还是比 v 深或者相同，那么就跳。换句话说就是只要跳完之后的深度不超过 v 就可以跳。</p>
+<p>第二处改变是在 u 和 v 同深度时，一起向上<strong>走</strong>变成一起向上<strong>跳</strong>，这将变成这个样子：
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">return</span><span class="w"> </span><span class="n">fa</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</code></pre></div></td></tr></table></div>
+<span class="arithmatex">\(\oplus\)</span> 的运算机制是相同为 0，不同为1。那么 <span class="arithmatex">\(fa[u][i] \oplus fa[v][i]\)</span> 这个表示的就是如果 <span class="arithmatex">\(fa[u][i]\)</span> 和 <span class="arithmatex">\(fa[v][i]\)</span> 相同，那么返回 0，否则返回 1。在 <code>if</code> 判别式里就是如果那两个相同，返回 <code>false</code>，否则返回 <code>true</code>。</p>
 <p>那么这个 <code>for</code> 循环意思就是将 u 和 v 都跳到还有一步就相遇的地方，答案就是 <span class="arithmatex">\(fa[u][0]\)</span> 或者 <span class="arithmatex">\(fa[v][0]\)</span> ，所以最后一行返回的是 <span class="arithmatex">\(fa[u][0]\)</span> （其实 <span class="arithmatex">\(fa[v][0]\)</span> 也可以）。</p>
 <h3 id="_5">时间复杂度</h3>
 <p>使用了倍增思想的 LCA 时间复杂度变快，由于预处理变成了 <span class="arithmatex">\(\varTheta(n \ log \ n)\)</span>，单次查询的时间复杂度降到了 <span class="arithmatex">\(\varTheta(log \ n)\)</span>。</p>

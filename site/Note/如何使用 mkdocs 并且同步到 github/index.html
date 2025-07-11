@@ -1279,8 +1279,8 @@
 <p>bash</p>
 <p>bash</p>
 <p>复制</p>
-<p><code>bash
-pip install mkdocs mkdocs-material  # 安装 MkDocs 及 Material 主题</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material<span class="w">  </span><span class="c1"># 安装 MkDocs 及 Material 主题</span>
+</code></pre></div></td></tr></table></div>
 </li>
 </ul>
 <hr />
@@ -1288,20 +1288,24 @@ pip install mkdocs mkdocs-material  # 安装 MkDocs 及 Material 主题</code></
 <p>bash</p>
 <p>bash</p>
 <p>复制</p>
-<pre><code class="language-bash">mkdocs new my-blog  # 创建名为 my-blog 的项目
-cd my-blog          # 进入项目目录
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>mkdocs<span class="w"> </span>new<span class="w"> </span>my-blog<span class="w">  </span><span class="c1"># 创建名为 my-blog 的项目</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>my-blog<span class="w">          </span><span class="c1"># 进入项目目录</span>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>
 <p>​<strong>目录结构</strong>​：</p>
 <p>markdown</p>
 <p>markdown</p>
 <p>复制</p>
-<p><code>markdown
-my-blog/
-├── docs/         # 存放 Markdown 网页
-│   └── index.md  # 默认首页
-└── mkdocs.yml    # 配置文件</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>my-blog/
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>├── docs/         # 存放 Markdown 网页
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>│   └── index.md  # 默认首页
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>└── mkdocs.yml    # 配置文件
+</code></pre></div></td></tr></table></div>
 </li>
 </ul>
 <hr />
@@ -1310,19 +1314,30 @@ my-blog/
 <p>yaml</p>
 <p>yaml</p>
 <p>复制</p>
-<pre><code class="language-yaml">site_name: 我的博客
-theme:
-  name: material    # 使用 Material 主题
-nav:
-  - 首页: index.md
-  - 指南: guides/install.md
-  - 关于: about.md
-
-plugins:            # 可选插件
-  - search        # 启用搜索功能
-  - minify:       # 压缩 HTML/CSS/JS
-      minify_html: true
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">我的博客</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nt">theme</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span><span class="w">    </span><span class="c1"># 使用 Material 主题</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">首页</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">指南</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guides/install.md</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">关于</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">about.md</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="nt">plugins</span><span class="p">:</span><span class="w">            </span><span class="c1"># 可选插件</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span><span class="w">        </span><span class="c1"># 启用搜索功能</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">minify</span><span class="p">:</span><span class="w">       </span><span class="c1"># 压缩 HTML/CSS/JS</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">      </span><span class="nt">minify_html</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="4">​<strong>4. 本地预览与构建</strong>​</h3>
 <ul>
@@ -1331,16 +1346,16 @@ plugins:            # 可选插件
 <p>bash</p>
 <p>bash</p>
 <p>复制</p>
-<p><code>bash
-mkdocs serve  # 访问 http://localhost:8000 查看效果</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>mkdocs<span class="w"> </span>serve<span class="w">  </span><span class="c1"># 访问 http://localhost:8000 查看效果</span>
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>​<strong>生成静态文件</strong>​</p>
 <p>bash</p>
 <p>bash</p>
 <p>复制</p>
-<p><code>bash
-mkdocs build  # 生成 site/ 目录（包含所有 HTML/CSS/JS）</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>mkdocs<span class="w"> </span>build<span class="w">  </span><span class="c1"># 生成 site/ 目录（包含所有 HTML/CSS/JS）</span>
+</code></pre></div></td></tr></table></div>
 </li>
 </ul>
 <hr />
@@ -1356,11 +1371,14 @@ mkdocs build  # 生成 site/ 目录（包含所有 HTML/CSS/JS）</code></p>
 <p>bash</p>
 <p>bash</p>
 <p>复制</p>
-<p><code>bash
-git clone https://github.com/username/username.github.io.git
-cp -r site/* username.github.io/  # 将生成的静态文件复制到仓库
-cd username.github.io
-git add . &amp;&amp; git commit -m "Deploy MkDocs" &amp;&amp; git push</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/username.github.io.git
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>cp<span class="w"> </span>-r<span class="w"> </span>site/*<span class="w"> </span>username.github.io/<span class="w">  </span><span class="c1"># 将生成的静态文件复制到仓库</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="nb">cd</span><span class="w"> </span>username.github.io
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Deploy MkDocs&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>访问 <code>https://username.github.io</code> 即可查看网站（）。</li>
 </ul>
@@ -1373,39 +1391,62 @@ git add . &amp;&amp; git commit -m "Deploy MkDocs" &amp;&amp; git push</code></p
 <p>yaml</p>
 <p>yaml</p>
 <p>复制</p>
-<p><code>yaml
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [main]  # 触发分支
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.8'
-      - name: Install MkDocs
-        run: pip install mkdocs-material
-      - name: Build Site
-        run: mkdocs build
-      - name: Deploy to Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 触发分支</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Python</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install MkDocs</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Site</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to Pages</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./site</span>
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>​<strong>推送代码到 GitHub</strong>​</p>
 <p>bash</p>
 <p>bash</p>
 <p>复制</p>
-<p><code>bash
-git add .github/workflows/deploy.yml
-git commit -m "Add deployment workflow"
-git push</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>git<span class="w"> </span>add<span class="w"> </span>.github/workflows/deploy.yml
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add deployment workflow&quot;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>git<span class="w"> </span>push
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>每次推送代码到 <code>main</code> 分支，GitHub Actions 会自动构建并部署到 GitHub Pages（）。</li>
 </ul>
@@ -1422,10 +1463,12 @@ git push</code></p>
 <p>bash</p>
 <p>bash</p>
 <p>复制</p>
-<p><code>bash
-git add docs/ mkdocs.yml
-git commit -m "Update documentation"
-git push</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>git<span class="w"> </span>add<span class="w"> </span>docs/<span class="w"> </span>mkdocs.yml
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update documentation&quot;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>git<span class="w"> </span>push
+</code></pre></div></td></tr></table></div>
 </li>
 </ul>
 <hr />

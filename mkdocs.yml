@@ -12,7 +12,6 @@ theme:
     - navigation.top
     - navigation.tabs
   palette:
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -28,6 +27,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
 nav:
   - 首页: index.md
   - Basic:
@@ -58,6 +58,12 @@ plugins:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true  # 启用通用数学模式
+  - pymdownx.highlight:
+      linenums: true       # 显示行号
+      anchor_linenums: true # 行号可点击
+      pygments_style: solarized-dark # Pygments 主题
+  - pymdownx.inlinehilite   # 行内代码高亮
+  - pymdownx.superfences   # 支持嵌套代码块[3,5](@ref)
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # MathJax 3
