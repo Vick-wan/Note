@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Data_structure/DSU/" class="md-tabs__link">
+        <a href="../../Data_structure/DSU.md" class="md-tabs__link">
           
   
   
@@ -582,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Data_structure/DSU/" class="md-nav__link">
+      <a href="../../Data_structure/DSU.md" class="md-nav__link">
         
   
   
@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Data_structure/Trie/" class="md-nav__link">
+      <a href="../../Data_structure/Trie.md" class="md-nav__link">
         
   
   
@@ -947,6 +947,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -979,6 +981,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -987,7 +991,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       双向同时搜索
     </span>
@@ -997,7 +1001,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       观察
     </span>
@@ -1006,7 +1010,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       总结
     </span>
@@ -1018,30 +1022,6 @@
   <a href="#code" class="md-nav__link">
     <span class="md-ellipsis">
       Code
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#include" class="md-nav__link">
-    <span class="md-ellipsis">
-      include
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="include">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meet-in-the-middle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Meet in the middle
     </span>
   </a>
   
@@ -1271,6 +1251,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1279,7 +1261,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       双向同时搜索
     </span>
@@ -1289,7 +1271,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       观察
     </span>
@@ -1298,7 +1280,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       总结
     </span>
@@ -1310,30 +1292,6 @@
   <a href="#code" class="md-nav__link">
     <span class="md-ellipsis">
       Code
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#include" class="md-nav__link">
-    <span class="md-ellipsis">
-      include
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="include">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meet-in-the-middle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Meet in the middle
     </span>
   </a>
   
@@ -1360,16 +1318,17 @@
 
 
 
+<h1 id="_1">双向搜索</h1>
 <p>这一章会总结两个东西：双向同时搜索和 <code>Meet in the middle</code>。</p>
-<h2 id="_1">双向同时搜索</h2>
+<h2 id="_2">双向同时搜索</h2>
 <p>优化1：双向搜索</p>
-<h3 id="_2">观察</h3>
+<h3 id="_3">观察</h3>
 <p>在普通 <code>BFS</code> 时我们经常是从起点一点一点加边到终点。在加边的过程中，我们不管有多少边，就都都加进去了。但是遇到这样的图，我们就可能会超时：
 <img alt="image lost" src="../../../assets/images/BFS1.png" /></p>
 <p>这样发现，如果我们从终点开始搜索会更快，于是 <code>BFS</code> 改为从终点 <span class="arithmatex">\(\to\)</span> 起点，于是我们又遇到了一个问题，如果图张这样，那么我们还是会超时：
 <img alt="image lost" src="../../../assets/images/BFS2.png" /></p>
 <p>但是这样我们又发现，这样从起点开始比较好，更快。</p>
-<h3 id="_3">总结</h3>
+<h3 id="_4">总结</h3>
 <p>总结发现在写 <code>BFS</code> 时，不能直接从起点或终点出发，否则会遇到上面两种情况，会导致 <code>TLE</code>。</p>
 <p>所以使用双向搜索来优化 <code>BFS</code>，这个用法是在优化 <code>BFS</code> 时可能要使用的，实现是从两侧展开分枝，哪边分枝少就从哪边展开。</p>
 <h3 id="code">Code</h3>

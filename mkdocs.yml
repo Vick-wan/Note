@@ -60,7 +60,7 @@ markdown_extensions:
       generic: true  # 启用通用数学模式
   - pymdownx.highlight:
       linenums: true       # 显示行号
-      anchor_linenums: true # 行号可点击
+      anchor_linenums: false # 行号可点击
       pygments_style: solarized-dark # Pygments 主题
   - pymdownx.inlinehilite   # 行内代码高亮
   - pymdownx.superfences   # 支持嵌套代码块[3,5](@ref)
