@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Note/Basic/倍增.md",
+                "file": "Note/Data_structure/并查集.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "倍增"
+              "title": "并查集"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Note/Basic/倍增.md",
+                "file": "Note/Data_structure/并查集.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "倍增 的大纲"
+              "title": "并查集 的大纲"
             }
           },
           {
@@ -193,6 +193,7 @@
   },
   "active": "20fb8d140e55b8f2",
   "lastOpenFiles": [
+    "Note/Basic/倍增.md",
     "Note/临时笔记.md",
     "Note/Search/BFS.md",
     "Note/Search/双向搜索.md",
@@ -204,7 +205,6 @@
     "Note/Graph/Types of Graph/DAG.md",
     "Note/DP/最长公共子序列.md",
     "Note/DP/基础DP.md",
-    "Note/Basic/倍增.md",
     "Note/Basic/二分查找.md",
     "Note/Basic/排序.md",
     "Note/Basic/运算优先级.md",

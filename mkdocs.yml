@@ -33,8 +33,8 @@ nav:
   - Basic:
     - 运算优先级: Note/Basic/运算优先级.md
   - Data Structure:
-    - DSU: Note/Data_structure/DSU.md
-    - Trie: Note/Data_structure/Trie.md
+    - 并查集: Note/Data_structure/并查集.md
+    - 字典树: Note/Data_structure/字典树.md
   - DP:
     - 背包: Note/DP/背包.md
     - 最长公共子序列: Note/DP/最长公共子序列.md
