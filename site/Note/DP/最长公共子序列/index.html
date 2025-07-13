@@ -1499,7 +1499,7 @@ dp[i][j - 1]
 <div class="arithmatex">\[
 dp[i][j][0] = min\begin{cases}
 dp[i][j - 1][0] + cal\_dis(\text两点之间的距离) \newline
-dp[i][j - 1][1] + dis\_dis(\text两点之间的距离)
+dp[i][j - 1][1] + cal\_dis(\text两点之间的距离)
 \end{cases}
 \]</div>
 <ol>
@@ -1510,8 +1510,8 @@ dp[i][j - 1][1] + dis\_dis(\text两点之间的距离)
 </ol>
 <div class="arithmatex">\[
 dp[i][j][1] = min\begin{cases}
-dp[i - 1][j][0] + cal_dis(\text两点之间的距离) \newline
-dp[i - 1][j][1] + cal_dis(\text两点之间的距离)
+dp[i - 1][j][0] + cal\_dis(\text两点之间的距离) \newline
+dp[i - 1][j][1] + cal\_dis(\text两点之间的距离)
 \end{cases}
 \]</div>
 <h4 id="code_1">Code</h4>

@@ -1,0 +1,78 @@
+/* 反馈容器样式 */
+.feedback-container {
+  margin: 3rem 0 2rem;
+  padding: 1.5rem;
+  background-color: var(--md-default-bg-color--light);
+  border-top: 2px solid var(--md-primary-fg-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.feedback-title {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--md-default-fg-color);
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* 深色模式适配 */
+[data-md-color-scheme="slate"] .feedback-button {
+  border-color: var(--md-default-fg-color--lighter);
+}
+
+/* 按钮悬停效果 */
+.feedback-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#like-btn {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+
+#dislike-btn {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+/* 已投票按钮样式 */
+.feedback-button.voted {
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+#like-btn.voted {
+  background-color: #4caf50;
+  color: white;
+}
+
+#dislike-btn.voted {
+  background-color: #f44336;
+  color: white;
+}
+
+/* 反馈消息样式 */
+.feedback-message {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+  display: none;
+}
