@@ -1,2 +1,4 @@
 # Note
-[Note Link](https://vick-wan.github.io/Note/site/)
+<a href="https://vick-wan.github.io/Note/site/" target="_blank" rel="noopener noreferrer">
+    Note Link
+</a>
