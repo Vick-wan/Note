@@ -1,2 +1,2 @@
 # Note
-This is notes for Vick.
+(Note Link)[https://vick-wan.github.io/Note/site/]
