@@ -1166,6 +1166,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      冒泡排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="冒泡排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stdsort" class="md-nav__link">
     <span class="md-ellipsis">
       std::sort 函数
@@ -1176,7 +1200,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       基本操作
     </span>
@@ -1185,7 +1209,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       自定义排序规则
     </span>
@@ -1204,7 +1228,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       外置排序函数
     </span>
@@ -1214,6 +1238,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
   
 </li>
         
@@ -1239,9 +1272,25 @@
 
 
 <h1 id="_1">排序</h1>
+<h2 id="_2">冒泡排序</h2>
+<p>冒泡排序是一种排序方法，思路就是枚举每一个点，将这个点挪到这个点该在的地方。</p>
+<h3 id="code">Code</h3>
+<p>思路有些简单，所以直接上核心代码（代码上面会有注释）。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="stdsort">std::sort 函数</h2>
 <p>这是一个系统提供的函数，内部使用的是快速排序，这个函数可以自定义排序规则，但需要引用 <code>algorithm</code> 头文件。</p>
-<h3 id="_2">基本操作</h3>
+<h3 id="_3">基本操作</h3>
 <p><code>std::sort</code> 函数的基本格式如下：
 ```cpp;
 sort(开始，结束，参数);
@@ -1257,7 +1306,7 @@ int a[MAXN]; // 目标排序数组
 sort(a + 1, a + n + 1); // 将a数组里的[1~n]元素进行升序排序
 sort(a + 1, a + n + 1, greater&lt;int&gt;()); // 将a数组里的[1~n]元素进行降序排序
 </code></pre></div></td></tr></table></div></p>
-<h3 id="_3">自定义排序规则</h3>
+<h3 id="_4">自定义排序规则</h3>
 <h4 id="lambda-c-11">Lambda 表达式（C++ 11及以上）</h4>
 <p>直接在 <code>std::sort</code> 的参数列表中定义 <code>Lambda</code> 表达式即可，简洁高效：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1276,7 +1325,7 @@ sort(a + 1, a + n + 1, greater&lt;int&gt;()); // 将a数组里的[1~n]元素进�
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="p">});</span><span class="w"> </span><span class="c1">// 降序排序</span>
 </code></pre></div></td></tr></table></div></p>
-<h4 id="_4">外置排序函数</h4>
+<h4 id="_5">外置排序函数</h4>
 <p>我们可以在 <code>std::sort</code> 的参数列表里引入排序的函数（比如<code>cmp</code>）：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1296,6 +1345,8 @@ sort(a + 1, a + n + 1, greater&lt;int&gt;()); // 将a数组里的[1~n]元素进�
 <span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">cmp2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 降序排序</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
+<h3 id="_6">时间复杂度</h3>
+<p>由于 <code>std::sort</code> 使用的是快速排序，所以时间复杂度自然是 <span class="arithmatex">\(O(n\log{n})\)</span>。</p>
 
 
 
@@ -1315,12 +1366,6 @@ sort(a + 1, a + n + 1, greater&lt;int&gt;()); // 将a数组里的[1~n]元素进�
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
         
       </main>
       
@@ -1350,7 +1395,7 @@ sort(a + 1, a + n + 1, greater&lt;int&gt;()); // 将a数组里的[1~n]元素进�
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "header.autohide", "navigation.top", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "header.autohide", "navigation.tabs", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

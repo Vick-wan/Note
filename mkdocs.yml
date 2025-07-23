@@ -5,12 +5,13 @@ theme:
   font:
     text: Geogia
   icon:
+    favicon: material/pen
     logo: material/pen
   features:
     - content.code.copy # 启动复制按钮
     - header.autohide
-    - navigation.top
     - navigation.tabs
+    - content.footnote.tooltips
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -64,6 +65,15 @@ markdown_extensions:
       pygments_style: solarized-dark # Pygments 主题
   - pymdownx.inlinehilite   # 行内代码高亮
   - pymdownx.superfences   # 支持嵌套代码块[3,5](@ref)
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # MathJax 3

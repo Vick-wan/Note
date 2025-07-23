@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e9b487cf3ae372c6",
+        "id": "0109d4f6579ef85e",
         "type": "tabs",
         "children": [
           {
-            "id": "20fb8d140e55b8f2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Note/DP/背包.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "背包"
-            }
-          },
-          {
-            "id": "2499492f4443714b",
+            "id": "53001b11bfe6844c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Latex 基本操作"
             }
+          },
+          {
+            "id": "4a18c818bfa042de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Note/DP/背包.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "背包"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,13 +192,41 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "20fb8d140e55b8f2",
+  "active": "4a18c818bfa042de",
   "lastOpenFiles": [
-    "Note/DP/基础DP.md",
-    "Note/DP/最长公共子序列.md",
-    "Note/DP/背包.md",
-    "Note/Imput&Output/快读.md",
+    "Note/Graph/拓扑排序.md",
+    "Note/Tree/LCA.md",
+    "Note/Graph/欧拉图.md",
+    "Note/Search/双向搜索.md",
+    "Note/Search/BFS.md",
+    "Markdown 基本操作.md",
     "Latex 基本操作.md",
+    "Note/DP/最长公共子序列.md",
+    "Note/DP/基础DP.md",
+    "Note/DP/背包.md",
+    "assets/images/knapsack5.png",
+    "assets/images/knapsack4.png",
+    "Note/Basic/排序.md",
+    "Note/Graph/最短路.md",
+    "Note/Graph/线段树.md",
+    "Note/Basic/倍增.md",
+    "Note/Data_structure/并查集.md",
+    "Note/Imput&Output/输入输出 int128.md",
+    "Note/Imput&Output/快读.md",
+    "Note/Basic/运算优先级.md",
+    "Note/Data_structure/字典树.md",
+    "Test 1.md",
+    "index.md",
+    "guides.md",
+    "about.md",
+    "总结/LGR-233-Div.4 题解.md",
+    "Note/临时笔记.md",
+    "未命名.canvas",
+    "Note/Basic/二分查找.md",
+    "总结",
+    "assets/images/logo.png",
+    "assets/logo.png",
+    "logo.png",
     "css/extra.css",
     "css/新建 Text Document.txt",
     "js/feedback.js",
@@ -205,39 +234,12 @@
     "css",
     "js",
     "新建文件夹",
-    "Note/Graph/拓扑排序.md",
-    "Note/Graph/欧拉图.md",
-    "Note/Data_structure/并查集.md",
-    "Note/Basic/倍增.md",
-    "Note/临时笔记.md",
-    "Note/Search/BFS.md",
-    "Note/Search/双向搜索.md",
-    "Note/Graph/最短路.md",
-    "Note/Graph/线段树.md",
-    "Note/Graph/Types of Graph/DAG.md",
-    "Note/Basic/二分查找.md",
-    "Note/Basic/排序.md",
-    "Note/Basic/运算优先级.md",
-    "Note/Data_structure/字典树.md",
     "assets/images/knapsack3.png",
     "assets/images/knapsack2.png",
-    "群规.md",
-    "guides.md",
-    "index.md",
-    "Note/Tree/LCA.md",
     "assets/images/topological_sorting1.png",
     "assets/images/topological_sorting.png",
-    "Test 1.md",
-    "Markdown 基本操作.md",
     "assets/images/knapsack1.png",
     "Note/DP/背包",
-    "未命名.canvas",
-    "assets/images/LCA1.png",
-    "assets/images/DSU3.png",
-    "assets/images/DSU2.png",
-    "assets/images/DAG1.png",
-    "assets/images/BFS2.png",
-    "Note/Tree",
-    "Note/Search"
+    "Note/Tree"
   ]
 }

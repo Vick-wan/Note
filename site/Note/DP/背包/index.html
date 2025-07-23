@@ -938,6 +938,15 @@
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
+      复杂度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
       二进制优化
     </span>
   </a>
@@ -946,7 +955,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
       思路
     </span>
@@ -963,17 +972,59 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     <span class="md-ellipsis">
       单调队列优化
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="单调队列优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1678,6 +1729,15 @@
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
+      复杂度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
       二进制优化
     </span>
   </a>
@@ -1686,7 +1746,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
       思路
     </span>
@@ -1703,17 +1763,59 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     <span class="md-ellipsis">
       单调队列优化
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="单调队列优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1809,11 +1911,10 @@ dp[i-1][j] \newline
 dp[i][j - k \times c[i]] + k \times v[i]
 \end{cases}
 \quad
-\text{subject to:} \quad 
-\boxed{\begin{array}{l} 
+\begin{array}{l} 
 0 \leq k \leq \frac{W}{c[i]} \newline
 k \times c[i] \leq j 
-\end{array}}
+\end{array}
 $$</p>
 <h3 id="code_2">Code</h3>
 <p>下面为完全背包的转移时的代码
@@ -1866,15 +1967,14 @@ $$</p>
 <p>完全背包是通过枚举一个 <code>k</code> 来表示拿 <code>k</code> 个，而这个 <code>k</code> 的上限是 <span class="arithmatex">\(\frac{W}{c[i]}\)</span>。而多重背包的上限题目已给出，即 <code>m[i]</code> 。所以转移就是完全背包的转移将 <code>k</code> 的上限替换为 <code>m[i]</code> 就可以了。</p>
 <div class="arithmatex">\[
 dp[i][j] = \max \begin{cases}
-dp[i - 1][j] \newline
+dp[i - 1][j] \newline 
 dp[i][j - k \times c[i]] + k \times v[i]
 \end{cases}
 \quad
-\text{subject to:} \quad 
-\boxed{\begin{array}{l} 
+\begin{array}{l} 
 0 \leq k \leq m[i] \newline
 k \times c[i] \leq j 
-\end{array}}
+\end{array}
 \]</div>
 <h3 id="code_4">Code</h3>
 <p>下面是多重背包转移时的代码：
@@ -1884,21 +1984,43 @@ k \times c[i] \leq j
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">W</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span>
+<span class="w">                </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
-<h3 id="_16">二进制优化</h3>
+<p>当然，我们也可以使用滚动数组来优化我们空间复杂度：
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">W</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span>
+<span class="w">                </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="_16">复杂度</h3>
+<p>这个使用了三重循环，所以时间复杂度为 <span class="arithmatex">\(O(W \sum\limits_{i = 1}^{N}{m_i})\)</span> 。</p>
+<p>空间复杂度在没有使用滚动数组前为 <span class="arithmatex">\(O(NW)\)</span> ，使用滚动数组后为 <span class="arithmatex">\(O(W)\)</span> 。时间复杂度过高，显然是可以优化的。</p>
+<h3 id="_17">二进制优化</h3>
 <p>二进制优化是一种将多重背包转换为 01 背包的巧妙方法，大幅降低算法的时间复杂度。这种优化利用了<strong>二进制表示的特性</strong>，将物品拆分后用 01 背包的方法解决。</p>
 <blockquote>
 <p>我们通过二进制拆分，将<strong>物品数量限制</strong>转化为<strong>物品组合选择</strong>，从而将多重背包问题转化为01背包问题，来优化时间。</p>
 </blockquote>
-<h4 id="_17">思路</h4>
-<p>在枚举 <code>k</code> 时，会发现枚举次数为 <code>m[i]</code> ，这非常慢。所以考虑把 <code>k</code> 用若干个数的和表示出来， 然后使用 01 背包思路解决，而二进制刚好可以表示出来。所以我们尝试把 <code>m[i]</code> 件商品拆成若干个而二的幂和一个剩余的数之和，这样 <code>k</code> 就一定可以表示出来，而且拆成的物品少，仅为 <span class="arithmatex">\(\lceil \log_{2}{m[i]} \rceil\)</span> 件。</p>
+<h4 id="_18">思路</h4>
+<p>在枚举 <code>k</code> 时，会发现枚举次数为 <code>m[i]</code> ，这非常慢。所以考虑把 <code>k</code> 用若干个数的和表示出来， 然后使用 01 背包思路解决，而二进制刚好可以表示出来。所以我们尝试把 <code>m[i]</code> 件商品拆成若干个二的幂和一个剩余的数之和，这样 <code>k</code> 就一定可以被表示出来，而且拆成的物品少，仅为 <span class="arithmatex">\(\lceil \log_{2}{m[i]} \rceil\)</span> 件。</p>
 <p>所以我们将一个数拆成以下形式：</p>
 <p>$$
 2^0 + 2^1 + 2^2 + \cdots + 2^x + \text{Remain}
@@ -1973,8 +2095,10 @@ $$
 <span class="w">        </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">newc</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-转移时也可以使用滚动数组
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<p>转移时也可以使用滚动数组：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1987,10 +2111,75 @@ $$
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
-</li>
-</ol>
-<h3 id="_18">单调队列优化</h3>
-<p>待更新</p>
+<h4 id="_19">时间复杂度</h4>
+<p>二进制优化大大降低了时间复杂度，从之前的 <span class="arithmatex">\(O(W \sum\limits_{i = 1}^{N}{\text{m}_i})\)</span> 优化到了 <span class="arithmatex">\(O(W \sum\limits_{i = 1}^{n}{\log{m_i}})\)</span> 。<del>时间是否可以进一步的优化呢？</del></p>
+<p>空间复杂度在未滚动数组时为 <span class="arithmatex">\(O(NW)\)</span>，在滚动数组后为 <span class="arithmatex">\(O(W)\)</span> 。</p>
+<h3 id="_20">单调队列优化</h3>
+<p>单调队列优化通过将动态规划的状态转移过程转化为滑动窗口最大值的一个优化方法。这可以使得我们的时间复杂度降低至 <span class="arithmatex">\(O(NW)\)</span> ，而进一步优化我们的代码。</p>
+<h4 id="_21">思路</h4>
+<p>按照朴素的多重背包我们可以推出这个点是由哪些点转移而来，如下图：
+<img alt="image lost" src="../../../assets/images/knapsack4.png" />
+观察后发现 <span class="arithmatex">\(DP[j] = \max(DP[j - k \ w_i], DP[j - (k - 1) \ w_i], \cdots, DP[j - w_i])\)</span>  ，简化后就是 <span class="arithmatex">\(DP[j]\)</span> 从 <span class="arithmatex">\(DP[j - k \ w_i]\)</span> 转移而来。而我们可以观察到的一个重要 的性质就是 <span class="arithmatex">\(j\)</span> 和 <span class="arithmatex">\(j - k \ w_i\)</span> 同余，也就是 <span class="arithmatex">\(j\)</span> 和 <span class="arithmatex">\(k \ w_i\)</span> 同余。所以我们可以按照模 <span class="arithmatex">\(w_i\)</span> 进行分组，相同余数的分乘同一组，如下图（每一行一个组）：</p>
+<p><img alt="image lost" src="../../../assets/images/knapsack5.png" /></p>
+<p>我们发现组与组之间无转移关系，所以这个这个状态只可能是从同一组的某一个区间转移而来。假如 <span class="arithmatex">\(r + k \ w_i = j\)</span> ，其中 <span class="arithmatex">\(r\)</span> 代表 <span class="arithmatex">\(j\)</span> 模 <span class="arithmatex">\(w_i\)</span> 的余数。那么这个点的转移范围就是 <span class="arithmatex">\([r + (k - m_i) \ w_i, r + (k - 1) \ w_i]\)</span> 。<strong>注意物品数量有限，不能拿大于 <span class="arithmatex">\(m_i\)</span> 个物品。</strong></p>
+<p>在这里我们发现有区间的最值转移，所以我们容易想到使用单调队列。这样我们每个组都使用单调队列转移，就可以求出答案了。</p>
+<h4 id="code_6">Code</h4>
+<p>下面是单调队列优化多重背包的核心代码。
+1. 变量定义
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Q</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">MAXW</span><span class="p">];</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">MAXW</span><span class="p">];</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">head</span><span class="p">,</span><span class="w"> </span><span class="n">tail</span><span class="p">;</span><span class="w"> </span><span class="c1">// 单调队列的首和尾</span>
+</code></pre></div></td></tr></table></div>
+2. 核心代码
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">r</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 枚举模数</span>
+<span class="w">        </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">W</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// 算出最多的数量</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">head</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">tail</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">head</span><span class="p">].</span><span class="n">u</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="n">head</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">head</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">tail</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">w</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">tail</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">].</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="n">tail</span><span class="o">--</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">q</span><span class="p">[</span><span class="n">tail</span><span class="p">].</span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
+<span class="w">            </span><span class="n">q</span><span class="p">[</span><span class="n">tail</span><span class="p">].</span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="n">tail</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">dp</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">head</span><span class="p">].</span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h4 id="_22">时间复杂度</h4>
+<p>单调队列优化多重背包将多重背包的时间复杂度将至 <span class="arithmatex">\(O(NW)\)</span> 。</p>
+<p>空间复杂度在未使用滚动数组时为 <span class="arithmatex">\(O(NW)\)</span> ，使用滚动数组后为 <span class="arithmatex">\(O(W)\)</span> 。</p>
 <hr />
 
 
@@ -2011,12 +2200,6 @@ $$
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
         
       </main>
       
@@ -2046,7 +2229,7 @@ $$
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "header.autohide", "navigation.top", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "header.autohide", "navigation.tabs", "content.footnote.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

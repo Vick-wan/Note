@@ -86,9 +86,6 @@ $\oplus$ 的运算机制是相同为 0，不同为1。那么 $fa[u][i] \oplus fa
 
 总体而言， `LCA` 是一个可以让我们快速求出两个点的最近公共祖先的一个算法，也是让我们快速求出树上两个点的最短距离的方法。
 ## 例题
-- <a href="https://www.luogu.com.cn/problem/P3379" target="_blank" rel="noopener noreferrer">
-    P3379 【模板】最近公共祖先（LCA）
-</a>
-- <a href="https://www.luogu.com.cn/problem/P10113" target="_blank" rel="noopener noreferrer">
-    P10113 大量的工作沟通
-</a>
+
+- <a href="https://www.luogu.com.cn/problem/P3379" target="_blank">P3379 【模板】最近公共祖先（LCA）</a>
+- <a href="https://www.luogu.com.cn/problem/P10113" target="_blank">P10113 大量的工作沟通）</a>

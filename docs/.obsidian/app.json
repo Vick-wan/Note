@@ -1,13 +1,17 @@
 {
-  "promptDelete": true,
+  "promptDelete": false,
   "alwaysUpdateLinks": true,
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 65
+    "downscalePercent": 80
   },
   "defaultViewMode": "source",
-  "livePreview": true
+  "livePreview": true,
+  "strictLineBreaks": true,
+  "propertiesInDocument": "visible",
+  "showLineNumber": false,
+  "attachmentFolderPath": "/"
 }

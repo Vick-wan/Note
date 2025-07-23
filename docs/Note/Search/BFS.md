@@ -111,6 +111,11 @@ void bfs(int st) {
 ## BFS
 ## 双向搜索优化BFS
 ## 01-BFS
+
+|||
+| --- | --- |
+|||
+
 - <a href="https://www.luogu.com.cn/problem/P1141" target="_blank" rel="noopener noreferrer">
     P1141 01迷宫
 </a>
